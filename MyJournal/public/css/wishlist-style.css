@@ -1,0 +1,217 @@
+/* --------------------------------------------------
+   Base reset & font
+--------------------------------------------------*/
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+/* --------------------------------------------------
+   Body layout / global BG
+--------------------------------------------------*/
+body {
+    background-color: #4C6A92;   /* slate‑blue background */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* --------------------------------------------------
+   Header & title
+--------------------------------------------------*/
+header {
+    display: flex;
+    height: 150px;
+    background-color: #2E3B46;
+    color: #F1F8FF;
+    font-size: 30px;
+    padding: 0 20px;
+}
+
+#title {
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+    width: 80%;
+    height: 100%;
+    font-size: 60px;
+}
+
+#title h1 {
+    color: #F1F8FF;
+    padding: 5px;
+}
+
+nav {
+    width: 20%;
+    height: 100%;
+}
+
+/* --------------------------------------------------
+   Menu button
+--------------------------------------------------*/
+#menu-btn {
+    font-size: 30px;
+    background-color: #F1F8FF;
+    color: #2E3B46;
+    border: 4px #4C6A92 solid;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    float: right;
+    margin-top: 40px;
+    transition: background-color .5s ease, color .5s ease;
+}
+
+#menu-btn:hover {
+    background-color: #4C6A92;
+    color: #F1F8FF;
+}
+
+/* --------------------------------------------------
+   Layout container
+--------------------------------------------------*/
+#container {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+/* --------------------------------------------------
+   Main section
+--------------------------------------------------*/
+main {
+    flex: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #4C6A92;
+    color: #F1F8FF;
+    font-size: 200px; /* overridden by inner content */
+    overflow: auto;
+    transition: margin-right .3s ease,
+                background-color .35s ease,
+                opacity .35s ease,
+                color .35s ease;
+}
+
+/* two inner blocks inside <main> share same fade timing */
+main > div {
+    transition: opacity .35s ease, color .35s ease;
+}
+
+/* --------------------------------------------------
+   Sidebar (aside)
+--------------------------------------------------*/
+aside {
+    display: flex;
+    flex-direction: column;
+    background-color: #7e84a3;
+    color: #F1F8FF;
+    padding: 20px 10px;
+    position: fixed;
+    top: 150px;          /* just below header */
+    right: -250px;       /* off‑screen by default */
+    width: 250px;
+    height: calc(100% - 150px);
+    transition: right .3s ease;
+    z-index: 1000;
+}
+
+aside.visible {
+    right: 0;            /* slide in */
+}
+
+/* sidebar typography */
+h2 {
+    margin-top: 10px;
+    font-size: 32px;
+    text-align: center;
+}
+
+aside h2 {
+    margin-bottom: 30px;
+    padding: 30px;
+    background-color: #2E3B46;
+    border-radius: 60px;
+}
+
+aside li {
+    list-style-type: disc;
+    margin-top: 12px;
+}
+
+aside li h3 {
+    margin-top: 4px;
+}
+
+aside a {
+    font-size: 24px;
+    text-decoration: none;
+    color: #F1F8FF;
+}
+
+/* --------------------------------------------------
+   Goals & control‑panel blocks inside main
+--------------------------------------------------*/
+main div {
+    display: flex;
+    justify-content: center;
+    overflow: auto;
+    width: 50%;
+    height: 100%;
+}
+
+#goals h2 {
+    font-size: 50px;
+}
+
+#control-pannel{
+    align-items: center;
+    font-size: 12px;
+    flex-direction: column;
+}
+
+/* --------------------------------------------------
+   Textarea & character counter
+--------------------------------------------------*/
+#custom-textarea {
+    width: 300px;
+    height: 150px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    resize: none;
+    overflow-y: auto;
+    line-height: 1.5;
+    outline: none;
+    box-sizing: border-box;
+    background-color: #2E3B46;
+    color: #F1F8FF;
+    caret-color: #F1F8FF;
+    transition: opacity .35s ease, color .35s ease, background-color .35s ease;
+}
+
+/* --------------------------------------------------
+   Dim / fade state while sidebar is open
+--------------------------------------------------*/
+main.darkened {
+    background-color: rgba(0,0,0,.45);
+}
+
+main.darkened > div {
+    opacity: .4;
+    color: rgba(126,132,163,.45);
+}
+
+#custom-textarea.darkened {
+    opacity: .5;
+    background-color: rgba(0,0,0,.45);
+    color: rgba(240,248,255,.85);
+}
+
+#custom-textarea.darkened::placeholder {
+    color: rgba(126,132,163,.25);
+}
