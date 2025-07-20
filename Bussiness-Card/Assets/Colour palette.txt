@@ -1,0 +1,8 @@
+Main bg			#435F81
+Second bg 		#2F3C47
+Third bg		#7E84A3
+Main text/buttons	#F6FAFF
+Hover highlight 	#9DC2E3
+Border lines		#DDE3EB
+Disabled UI		#9AA4B3
+Deep shadow		#1E252B

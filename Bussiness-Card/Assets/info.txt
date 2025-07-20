@@ -1,0 +1,38 @@
+O mnie
+    Jestem uczniem trzeciego roku Technikum nr 19 im. Marszałka Józefa Piłsudskiego w Poznaniu. Interesuję się szeroko pojętą informatyką — od tworzenia stron internetowych po sztuczną inteligencję.
+
+    Napędza mnie potrzeba ciągłego rozwoju i zdobywania nowej wiedzy. Potrafię się szybko dostosować, a każde powierzone mi zadanie traktuję poważnie i doprowadzam do końca.
+
+Umiejętności
+    *HTML
+    *CSS
+    *JavaScript
+    *PHP
+    Tworzę zarówno nowoczesne interfejsy front-endowe, jak i funkcjonalne rozwiązania z wykorzystaniem zaplecza (back-endu).
+
+Czym się zajmuję
+    W wolnym czasie realizuję własne projekty stron internetowych — zarówno oparte na bazach danych, jak i statyczne. Interesuję się również sztuczną inteligencją i planuję rozpocząć pracę nad własnym projektem w tym obszarze wraz z początkiem nowego roku szkolnego.
+
+Dlaczego warto
+    Jeśli zdecydujesz się zamówić stronę u mnie, możesz liczyć na pełne zaangażowanie i efekt, z którego będziesz zadowolony.
+
+
+
+💼 Oferta
+Zajmuję się tworzeniem nowoczesnych, responsywnych stron internetowych dostosowanych do indywidualnych potrzeb klienta.
+Do każdego projektu podchodzę indywidualnie — zakres i cena są ustalane po zapoznaniu się z wymaganiami.
+
+Co mogę dla Ciebie zrobić:
+Projektowanie i wdrażanie stron internetowych (HTML, CSS, JS, PHP)
+
+Proste systemy CMS / edytowalne strony
+
+Formularze kontaktowe, integracje z bazą danych
+
+Aktualizacja i modyfikacja istniejących stron
+
+Naprawa błędów i optymalizacja
+
+Wsparcie techniczne i doradztwo
+
+Chcesz, żebym wstawił to do gotowego kodu lub przetłumaczył na angielski?
