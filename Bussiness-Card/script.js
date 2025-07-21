@@ -1,6 +1,8 @@
 const header        = document.getElementById('header');
 const navLinks      = document.querySelectorAll('.nav-item'); // add this class to each <a>
 const everything = document.getElementById('body');
+const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+const firstSection = document.getElementById('first-section');
 
 let   lastScrollTop = 0;
 const triggerHeight = 80;
@@ -36,8 +38,7 @@ navLinks.forEach(link => {
 });
 
 everything.addEventListener('click', () => {
-  if (header.classList.contains('hidden')){
-  }else {
+  if (!header.classList.contains('hidden')) {
     header.classList.add('hidden');     // hide immediately
     autoHidePaused = true;              // ➋ pause auto logic
     setTimeout(() => autoHidePaused = false, 600); // resume after 0.6 s
@@ -104,3 +105,30 @@ hrItems.forEach(hr => {
     }, 500); // Initial delay for fading out the current image
   });
 });
+
+/* ---------- Mobile Menu Toggle ---------- */
+if (mobileMenuToggle && firstSection) {
+  mobileMenuToggle.addEventListener('click', () => {
+    // Toggle the active class on the hamburger button
+    mobileMenuToggle.classList.toggle('active');
+    
+    // Toggle the active class on the navigation menu
+    firstSection.classList.toggle('active');
+  });
+
+  // Close mobile menu when a nav link is clicked
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenuToggle.classList.remove('active');
+      firstSection.classList.remove('active');
+    });
+  });
+
+  // Close mobile menu when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!header.contains(e.target)) {
+      mobileMenuToggle.classList.remove('active');
+      firstSection.classList.remove('active');
+    }
+  });
+}
