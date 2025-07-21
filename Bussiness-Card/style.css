@@ -7,11 +7,22 @@ body {
   background: linear-gradient(180deg, #F6FAFF 0%, #435F81 100%);
   margin: 0;
   overflow-x: hidden;
+  -webkit-text-size-adjust: 100%; /* Prevent text scaling on iOS */
+  -ms-text-size-adjust: 100%;
+}
+
+/* Improve touch targets for mobile */
+@media (hover: none) and (pointer: coarse) {
+  .nav-item, .hr-item, #contact a {
+    min-height: 44px;
+    min-width: 44px;
+  }
 }
 
 header {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 3.75px 0;
   background-color: rgba(46, 59, 70, 0.9);
   position: sticky;
@@ -86,6 +97,38 @@ main div {
 #logo {
   position: relative;
   width: 20%;
+}
+
+/* Mobile menu toggle button (hamburger) */
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  margin-right: 20px;
+}
+
+.mobile-menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background-color: #F6FAFF;
+  margin: 3px 0;
+  transition: 0.3s;
+  border-radius: 2px;
+}
+
+.mobile-menu-toggle.active span:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.mobile-menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-toggle.active span:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
 }
 
 /* card = link */
@@ -326,6 +369,7 @@ a:active p {
 
 #Gmail{
   width: 100px !important;
+  height: 60px !important;
 }
 
 #contact img{
@@ -379,4 +423,260 @@ footer p{
   background-color: #1E252B;
   margin: 0;
   padding: 15px;
+}
+
+/* ========== RESPONSIVE DESIGN - MOBILE STYLES ========== */
+
+/* Tablet styles (768px and below) */
+@media screen and (max-width: 768px) {
+  /* Header adjustments */
+  header {
+    flex-direction: row;
+    padding: 10px 0;
+    flex-wrap: wrap;
+  }
+  
+  #logo {
+    width: auto;
+    order: 1;
+  }
+  
+  header img {
+    width: 120px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+  
+  .mobile-menu-toggle {
+    display: flex;
+    order: 2;
+  }
+  
+  #first-section {
+    width: 100%;
+    padding: 10px;
+    flex-wrap: wrap;
+    height: auto;
+    order: 3;
+    display: none; /* Hidden by default on mobile */
+  }
+  
+  #first-section.active {
+    display: flex;
+  }
+  
+  .nav-item {
+    width: 45%;
+    margin: 5px;
+    padding: 15px 8px;
+  }
+  
+  .nav-item p {
+    font-size: 20px;
+  }
+  
+  /* Main title adjustments */
+  #main-title h1 {
+    font-size: 36px;
+    letter-spacing: 2px;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  /* Info sections adjustments */
+  .info-section {
+    height: auto;
+    margin: 30px 0;
+    padding: 20px;
+  }
+  
+  .info-title {
+    font-size: 48px;
+    padding-bottom: 30px;
+  }
+  
+  #about h3, #offer h3 {
+    font-size: 32px;
+    padding: 5px;
+  }
+  
+  #about h4, #offer h4 {
+    font-size: 16px;
+    padding: 0 5px;
+  }
+  
+  /* Projects section */
+  #projects img {
+    width: 90vw;
+    max-width: 500px;
+  }
+  
+  /* Contact section */
+  #contact h3 {
+    font-size: 42px;
+  }
+  
+  #contact h4 {
+    font-size: 32px;
+  }
+  
+  .Contact {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  #contact img {
+    padding-left: 0;
+    margin: 10px 0;
+  }
+  
+  #contact p {
+    padding-left: 0;
+    text-align: center;
+  }
+}
+
+/* Mobile styles (480px and below) */
+@media screen and (max-width: 480px) {
+  /* Header for mobile */
+  header img {
+    width: 100px;
+    padding-left: 15px;
+  }
+  
+  #first-section {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .nav-item {
+    width: 80%;
+    margin: 8px 0;
+    padding: 12px;
+  }
+  
+  .nav-item p {
+    font-size: 18px;
+  }
+  
+  /* Main title for mobile */
+  #main-title h1 {
+    font-size: 28px;
+    letter-spacing: 1px;
+    padding: 8px;
+  }
+  
+  /* Info sections for mobile */
+  #info-sections {
+    width: 98%;
+    margin-top: 50px;
+  }
+  
+  .info-section {
+    padding: 15px;
+    margin: 20px 0;
+  }
+  
+  .info-title {
+    font-size: 36px;
+    padding-bottom: 20px;
+  }
+  
+  #about h3, #offer h3 {
+    font-size: 24px;
+    margin-top: 20px;
+  }
+  
+  #about h4, #offer h4 {
+    font-size: 14px;
+  }
+  
+  #about li, #offer li {
+    font-size: 16px;
+  }
+  
+  /* Projects for mobile */
+  #projects-showcase {
+    height: 60vh;
+    min-height: 300px;
+  }
+  
+  #projects img {
+    width: 95vw;
+    max-width: 400px;
+  }
+  
+  .hr-item {
+    width: 60px;
+    margin: 0 5px;
+    padding: 15px 5px; /* Better touch target */
+  }
+  
+  .hr-item.active {
+    width: 50px;
+  }
+  
+  .hr-item:not(.active) {
+    width: 20px;
+  }
+  
+  /* Contact for mobile */
+  #contact h3 {
+    font-size: 32px;
+  }
+  
+  #contact h4 {
+    font-size: 24px;
+  }
+  
+  #contact h5 {
+    font-size: 16px;
+  }
+  
+  #contact img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  #Gmail {
+    width: 83px !important;
+    height: 50px !important;
+  }
+  
+  #contact p {
+    font-size: 16px;
+  }
+  
+  /* Footer for mobile */
+  footer p {
+    font-size: 16px;
+    padding: 12px;
+  }
+}
+
+/* Extra small mobile styles (320px and below) */
+@media screen and (max-width: 320px) {
+  #main-title h1 {
+    font-size: 24px;
+    padding: 6px;
+  }
+  
+  .info-title {
+    font-size: 28px;
+  }
+  
+  #about h3, #offer h3 {
+    font-size: 20px;
+  }
+  
+  #contact h3 {
+    font-size: 24px;
+  }
+  
+  #contact h4 {
+    font-size: 20px;
+  }
 }
