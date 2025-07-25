@@ -52,7 +52,25 @@ const imageOrder = ['first', 'second', 'third', 'fourth'];
 
 const hrItems = document.querySelectorAll('.hr-item');
 const images = document.querySelectorAll('.project');
+const links = document.querySelectorAll('.link');
 let isTransitioning = false;  // Flag to prevent multiple clicks during transition
+
+// Function to update link visibility and clickability
+function updateLinkVisibility() {
+  links.forEach(link => {
+    const img = link.querySelector('.project');
+    if (img && img.classList.contains('selected')) {
+      link.style.pointerEvents = 'auto';
+      link.style.zIndex = '10';
+    } else {
+      link.style.pointerEvents = 'none';
+      link.style.zIndex = '0';
+    }
+  });
+}
+
+// Initialize link visibility on page load
+updateLinkVisibility();
 
 hrItems.forEach(hr => {
   hr.addEventListener('click', () => {
@@ -77,7 +95,7 @@ hrItems.forEach(hr => {
 
     // Example logic: If the second HR is clicked, show the third image
     if (className === 'second') {
-      imageClassToActivate = 'second';  // Set to the third image when the second HR is clicked
+      imageClassToActivate = 'second';  // Set to the second image when the second HR is clicked
     } else {
       imageClassToActivate = className;  // Otherwise, select the image that matches the HR
     }
@@ -97,6 +115,9 @@ hrItems.forEach(hr => {
     // Delay adding the selected class to the new image after the fade-out
     setTimeout(() => {
       selectedImage.classList.add('selected');
+      
+      // Update link visibility after changing the selected image
+      updateLinkVisibility();
 
       // After the transition completes, reset the flag to allow further clicks
       setTimeout(() => {
