@@ -309,13 +309,13 @@ a:active p {
 }
 .hr-item {
   width: 100px;
-  height: 2px;
+  height: 20px;
   border-radius: 20px;
   background-color: #1E252B;
   margin: 0 10px;
   cursor: pointer;
   border: none;
-  border-top: 4px solid #F6FAFF;
+  border: 3px solid #F6FAFF;
   transition: width 0.3s ease;
 }
 
@@ -820,11 +820,11 @@ footer p{
   .hr-item {
     width: 60px;
     margin: 0 5px;
-    padding: 15px 5px; /* Better touch target */
+    padding: 0px 5px; /* Better touch target */
   }
   
   .hr-item.active {
-    width: 50px;
+    width: 80px;
   }
   
   .hr-item:not(.active) {
