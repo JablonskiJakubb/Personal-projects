@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strona Główna - Abstrakcja</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="menu">
+        <section id="logo""><img src="assets/logo.png" alt="Logo"></section> 
+        <section><a href="#about" class ="link">O nas</a></section> 
+        <section><a href="#offer" class ="link">Oferta</a></section> 
+        <section><a href="#group-offers" class ="link">Grupy</a></section> 
+        <section><a href="#faq" class ="link">FAQ</a></section> 
+        <section><a href="#contact" class ="link">Kontakt</a></section> 
+        <section><a href="https://booksy.com/pl-pl/299316_abstrakcja_inni_1_polska#ba_s=seo" class ="link">Rezerwacja</a></section> 
+        <section id="media">Media</section>
+    </header>
+    <div class="container" id="eye-catcher">
+        <img src="assets/eye_catcher.jpg" alt="zdjęcię/film">
+    </div>
+    <div class="container" id="About">
+        <div class="container-content img about">
+            <img src="assets/about_us.jpg" alt="About-us">
+        </div>
+        <div class="container-content text about" id="about">
+            <h2>Abstrakcja</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+        </div>
+    </div>
+    <div class="container offer" id="offer">
+        <div class="container-content offer text">
+            <h2>Nasza Oferta</h2>
+            <div id="title-offer">
+                <button class="carousel-arrow left-arrow" id="leftArrow">&#8249;</button>
+                <p>Strzelanie</p>
+                <button class="carousel-arrow right-arrow" id="rightArrow">&#8250;</button>
+            </div>
+            <a id="learn-more-button" href="oferta.html#">Dowiedz się więcej</a>
+            
+            <!-- Hidden images for background swapping -->
+            <div class="background-images" style="display: none;">
+                <img src="placeholder-image.png" alt="Image 1" class="bg-image active" data-bg="placeholder-image.png">
+                <img src="placeholder-image.png" alt="Image 2" class="bg-image" data-bg="placeholder-image.png">
+                <img src="placeholder-image.png" alt="Image 3" class="bg-image" data-bg="placeholder-image.png">
+            </div>
+        </div>
+    </div>
+
+    <div class="container group-offers" id="group-offers">
+        <div class="container-content group-offers">
+            <h2>Oferta Grupowa</h2>
+            <div class="group-content">
+                <div class="group-info">
+                    <p>Specjalne pakiety dla grup</p>
+                    <ul>
+                        <li>...</li>
+                        <li>...</li>
+                        <li>...</li>
+                        <li>...</li>
+                    </ul>
+                    <a href="oferta.html#grupy" class="group-btn">Dowiedz się więcej</a>
+                </div>
+                <div class="group-image">
+                    <img src="placeholder-image.png" alt="Grupa ludzi">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container faq" id="faq">
+        <div class="container-content faq">
+            <h2>FAQ</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Placeholder Question 1</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Placeholder Question 2</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Placeholder Question 3</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Placeholder Question 4</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Placeholder Question 5</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Placeholder Question 6</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container contact" id="contact">
+        <div class="container-content contact left">
+            <h2>Kontakt</h2>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Imię</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="surname">Nazwisko</label>
+                    <input type="text" id="surname" name="surname" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Wiadomość</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Wyślij</button>
+            </form>
+        </div>
+        <div class="container-content contact right">
+            <h3>Gmail</h3>
+            <p>Strzeszyńska 63, Poznan, Poland</p>
+            <h3>Telefon</h3>
+            <p>791 223 211</p>
+            <h3>Adres</h3>
+            <p>kontakt@abstrakcja.com.pl</p>
+            <h3>Godziny otwarcia</h3>
+            <p>
+                poniedziałek
+                ZAMKNIĘTE
+                <br>
+                wtorek
+                16:00 - 21:00
+                <br>
+                środa
+                16:00 - 21:00
+                <br>
+                czwartek
+                16:00 - 21:00
+                <br>
+                Piątek
+                12:00 - 21:00
+                <br>
+                sobota
+                12:00 - 21:00
+                <br>
+                niedziela
+                12:00 - 21:00</p>    
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Abstrakcja. Wszystkie prawa zastrzeżone.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
