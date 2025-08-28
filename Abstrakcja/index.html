@@ -1,33 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Strona Główna - Abstrakcja</title>
+    <meta name="description" content="Abstrakcja – kreatywne aktywności i eventy: strzelanie, kręcenie, chlapanie, oferta grupowa i rezerwacja online.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&subset=latin,latin-ext&display=block" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&subset=latin,latin-ext&display=block"></noscript>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header id="menu">
-        <section id="logo""><img src="assets/logo.png" alt="Logo"></section> 
-        <section><a href="#about" class ="link">O nas</a></section> 
+    <header id="menu" role="navigation" aria-label="Główna nawigacja">
+        <section id="logo"><img src="assets/logo.png" alt="Logo" decoding="async"></section> 
+        <section><a href="#About" class ="link">O nas</a></section> 
         <section><a href="#offer" class ="link">Oferta</a></section> 
         <section><a href="#group-offers" class ="link">Grupy</a></section> 
         <section><a href="#faq" class ="link">FAQ</a></section> 
         <section><a href="#contact" class ="link">Kontakt</a></section> 
         <section><a href="https://booksy.com/pl-pl/299316_abstrakcja_inni_1_polska#ba_s=seo" class ="link">Rezerwacja</a></section> 
-        <section id="media">Media</section>
+        <section id="social-media">
+            <a href="#" class="social-link facebook" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+            </a>
+            <a href="#" class="social-link instagram" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+            </a>
+        </section>
     </header>
     <div class="container" id="eye-catcher">
-        <img src="assets/eye_catcher.jpg" alt="zdjęcię/film">
+        <img src="placeholder-image.png" alt="zdjęcię/film" width="1600" height="900" loading="eager" decoding="async">
     </div>
     <div class="container" id="About">
-        <div class="container-content img about">
-            <img src="assets/about_us.jpg" alt="About-us">
+        <div class="about-creative-layout">
+            <div class="about-image-container">
+                <div class="about-image-frame">
+                    <img src="placeholder-image.png" alt="About-us" width="1200" height="800" loading="lazy" decoding="async">
+                </div>
+            </div>
+            
+            <div class="about-title-container">
+                <h2 class="about-title">Abstrakcja</h2>
+            </div>
+            
+            <div class="about-content-container">
+                <div class="about-text-box">
+                    <p class="about-description">Witamy w świecie kreatywności i pasji! Jesteśmy miejscem, gdzie sztuka spotyka się z innowacją, a każdy projekt to nowa przygoda. Nasze doświadczenie i zaangażowanie sprawiają, że każde wyzwanie staje się okazją do stworzenia czegoś wyjątkowego.</p>
+                </div>
+            </div>
         </div>
-        <div class="container-content text about" id="about">
-            <h2>Abstrakcja</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-        </div>
+        
+        <div class="about-decorative-elements"></div>
     </div>
     <div class="container offer" id="offer">
         <div class="container-content offer text">
@@ -63,73 +91,165 @@
                     <a href="oferta.html#grupy" class="group-btn">Dowiedz się więcej</a>
                 </div>
                 <div class="group-image">
-                    <img src="placeholder-image.png" alt="Grupa ludzi">
+                    <img src="placeholder-image.png" alt="Grupa ludzi" width="1200" height="800" loading="lazy" decoding="async">
                 </div>
             </div>
         </div>
     </div>
 
     <div class="container faq" id="faq">
+        <div class="faq-background-effects">
+            <div class="faq-floating-shape shape-1"></div>
+            <div class="faq-floating-shape shape-2"></div>
+            <div class="faq-floating-shape shape-3"></div>
+            <div class="faq-particle particle-1"></div>
+            <div class="faq-particle particle-2"></div>
+            <div class="faq-particle particle-3"></div>
+            <div class="faq-particle particle-4"></div>
+            <div class="faq-particle particle-5"></div>
+            <div class="faq-particle particle-6"></div>
+            <div class="faq-particle particle-7"></div>
+            <div class="faq-particle particle-8"></div>
+            <div class="faq-particle particle-9"></div>
+            <div class="faq-particle particle-10"></div>
+        </div>
+        
         <div class="container-content faq">
-            <h2>FAQ</h2>
+            <div class="faq-header-creative">
+                <div class="faq-title-wrapper">
+                    <h2 class="faq-title-main">
+                        <span class="faq-title-letter">F</span>
+                        <span class="faq-title-letter">A</span>
+                        <span class="faq-title-letter">Q</span>
+                    </h2>
+                    <div class="faq-title-glow"></div>
+                </div>
+                <p class="faq-subtitle">Najczęściej zadawane pytania</p>
+                <div class="faq-decorative-line">
+                    <div class="line-segment"></div>
+                    <div class="line-segment"></div>
+                </div>
+            </div>
             
-            <div class="faq-item">
-                <div class="faq-question">
-                    <span>Placeholder Question 1</span>
-                    <span class="faq-icon">+</span>
-                </div>
-                <div class="faq-answer">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
-                </div>
-            </div>
+            <div class="faq-grid">
+                <div class="faq-item-creative faq-item-1">
+                    <div class="faq-card">
+                        <div class="faq-card-inner">
+                            <div class="faq-question-creative">
+                                <h3 class="faq-question-text">Jak długo trwa sesja?</h3>
+                                <div class="faq-expand-icon">
+                                    <span class="expand-line expand-line-1"></span>
+                                    <span class="expand-line expand-line-2"></span>
+                                </div>
+                            </div>
+                            <div class="faq-answer-creative">
+                                <div class="faq-answer-content">
+                                    <p>Standardowa sesja trwa około 60-90 minut, w zależności od wybranego pakietu. Zapewniamy pełne doświadczenie z czasem na przygotowanie i realizację.</p>
+                                </div>
+                            </div>
+                        </div>
 
-            <div class="faq-item">
-                <div class="faq-question">
-                    <span>Placeholder Question 2</span>
-                    <span class="faq-icon">+</span>
+                    </div>
                 </div>
-                <div class="faq-answer">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                </div>
-            </div>
 
-            <div class="faq-item">
-                <div class="faq-question">
-                    <span>Placeholder Question 3</span>
-                    <span class="faq-icon">+</span>
-                </div>
-                <div class="faq-answer">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </div>
-            </div>
+                <div class="faq-item-creative faq-item-2">
+                    <div class="faq-card">
+                        <div class="faq-card-inner">
+                            <div class="faq-question-creative">
+                                <h3 class="faq-question-text">Czy potrzebne jest doświadczenie?</h3>
+                                <div class="faq-expand-icon">
+                                    <span class="expand-line expand-line-1"></span>
+                                    <span class="expand-line expand-line-2"></span>
+                                </div>
+                            </div>
+                            <div class="faq-answer-creative">
+                                <div class="faq-answer-content">
+                                    <p>Absolutnie nie! Nasze aktywności są dostosowane do wszystkich poziomów zaawansowania. Nasz zespół przeprowadzi Cię przez cały proces krok po kroku.</p>
+                                </div>
+                            </div>
+                        </div>
 
-            <div class="faq-item">
-                <div class="faq-question">
-                    <span>Placeholder Question 4</span>
-                    <span class="faq-icon">+</span>
+                    </div>
                 </div>
-                <div class="faq-answer">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
-                </div>
-            </div>
 
-            <div class="faq-item">
-                <div class="faq-question">
-                    <span>Placeholder Question 5</span>
-                    <span class="faq-icon">+</span>
-                </div>
-                <div class="faq-answer">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores.</p>
-                </div>
-            </div>
+                <div class="faq-item-creative faq-item-3">
+                    <div class="faq-card">
+                        <div class="faq-card-inner">
+                            <div class="faq-question-creative">
+                                <h3 class="faq-question-text">Jakie są opcje grupowe?</h3>
+                                <div class="faq-expand-icon">
+                                    <span class="expand-line expand-line-1"></span>
+                                    <span class="expand-line expand-line-2"></span>
+                                </div>
+                            </div>
+                            <div class="faq-answer-creative">
+                                <div class="faq-answer-content">
+                                    <p>Oferujemy specjalne pakiety dla grup od 4 do 20 osób. Idealne na imprezy firmowe, urodziny czy wieczory panieńskie/kawalerskie!</p>
+                                </div>
+                            </div>
+                        </div>
 
-            <div class="faq-item">
-                <div class="faq-question">
-                    <span>Placeholder Question 6</span>
-                    <span class="faq-icon">+</span>
+                    </div>
                 </div>
-                <div class="faq-answer">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.</p>
+
+                <div class="faq-item-creative faq-item-4">
+                    <div class="faq-card">
+                        <div class="faq-card-inner">
+                            <div class="faq-question-creative">
+                                <h3 class="faq-question-text">Co jest wliczone w cenę?</h3>
+                                <div class="faq-expand-icon">
+                                    <span class="expand-line expand-line-1"></span>
+                                    <span class="expand-line expand-line-2"></span>
+                                </div>
+                            </div>
+                            <div class="faq-answer-creative">
+                                <div class="faq-answer-content">
+                                    <p>W cenę wliczony jest cały sprzęt, instruktaż, opieka instruktora oraz podstawowe materiały. Dodatkowo oferujemy pakiety z fotografią i filmowaniem.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="faq-item-creative faq-item-5">
+                    <div class="faq-card">
+                        <div class="faq-card-inner">
+                            <div class="faq-question-creative">
+                                <h3 class="faq-question-text">Jak wygląda rezerwacja?</h3>
+                                <div class="faq-expand-icon">
+                                    <span class="expand-line expand-line-1"></span>
+                                    <span class="expand-line expand-line-2"></span>
+                                </div>
+                            </div>
+                            <div class="faq-answer-creative">
+                                <div class="faq-answer-content">
+                                    <p>Rezerwacji można dokonać online przez Booksy, telefonicznie lub osobiście. Zalecamy rezerwację z wyprzedzeniem, szczególnie w weekendy.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="faq-item-creative faq-item-6">
+                    <div class="faq-card">
+                        <div class="faq-card-inner">
+                            <div class="faq-question-creative">
+                                <h3 class="faq-question-text">Czy można anulować rezerwację?</h3>
+                                <div class="faq-expand-icon">
+                                    <span class="expand-line expand-line-1"></span>
+                                    <span class="expand-line expand-line-2"></span>
+                                </div>
+                            </div>
+                            <div class="faq-answer-creative">
+                                <div class="faq-answer-content">
+                                    <p>Tak, rezerwację można anulować do 24 godzin przed terminem bez dodatkowych opłat. W przypadku późniejszej anulacji pobieramy 50% wartości rezerwacji.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>
@@ -140,63 +260,103 @@
             <h2>Kontakt</h2>
             <form class="contact-form">
                 <div class="form-group">
-                    <label for="name">Imię</label>
-                    <input type="text" id="name" name="name" required>
+                    <label for="name">Imię <span class="required">*</span></label>
+                    <input type="text" id="name" name="name" placeholder="Wprowadź swoje imię" autocomplete="given-name" required>
                 </div>
                 
                 <div class="form-group">
-                    <label for="surname">Nazwisko</label>
-                    <input type="text" id="surname" name="surname" required>
+                    <label for="surname">Nazwisko <span class="required">*</span></label>
+                    <input type="text" id="surname" name="surname" placeholder="Wprowadź swoje nazwisko" autocomplete="family-name" required>
                 </div>
                 
                 <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
+                    <label for="email">Email <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" placeholder="twoj.email@example.com" inputmode="email" autocomplete="email" required>
                 </div>
                 
                 <div class="form-group">
-                    <label for="message">Wiadomość</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
+                    <label for="message">Wiadomość <span class="required">*</span></label>
+                    <textarea id="message" name="message" rows="5" placeholder="Opisz swoją prośbę lub pytanie..." minlength="10" maxlength="1000" required></textarea>
                 </div>
                 
-                <button type="submit" class="submit-btn">Wyślij</button>
+                <button type="submit" class="submit-btn">Wyślij wiadomość</button>
             </form>
         </div>
         <div class="container-content contact right">
-            <h3>Gmail</h3>
-            <p>Strzeszyńska 63, Poznan, Poland</p>
-            <h3>Telefon</h3>
-            <p>791 223 211</p>
-            <h3>Adres</h3>
-            <p>kontakt@abstrakcja.com.pl</p>
-            <h3>Godziny otwarcia</h3>
-            <p>
-                poniedziałek
-                ZAMKNIĘTE
-                <br>
-                wtorek
-                16:00 - 21:00
-                <br>
-                środa
-                16:00 - 21:00
-                <br>
-                czwartek
-                16:00 - 21:00
-                <br>
-                Piątek
-                12:00 - 21:00
-                <br>
-                sobota
-                12:00 - 21:00
-                <br>
-                niedziela
-                12:00 - 21:00</p>    
+            <!-- Contact Section -->
+            <div class="contact-section">
+                <h3>Kontakt</h3>
+                <div class="contact-items">
+                    <div class="contact-item">
+                        <span class="contact-label">Email:</span>
+                        <span class="contact-value">kontakt@abstrakcja.com.pl</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">Telefon:</span>
+                        <span class="contact-value"><a href="tel:+48791223211">791 223 211</a></span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Location Section -->
+            <div class="location-section">
+                <h3>Lokalizacja</h3>
+                <div class="location-content">
+                    <div class="address-info">
+                        <span class="contact-label">Adres:</span>
+                        <span class="contact-value">Strzeszyńska 63, Poznan, Poland</span>
+                    </div>
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2431.685642275233!2d16.888918358537047!3d52.448609100176746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4704430011627c4b%3A0x971dafbba59c0c10!2sAbstrakcja!5e0!3m2!1spl!2spl!4v1755181463347!5m2!1spl!2spl"
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Hours Section -->
+            <div class="hours-section">
+                <h3>Godziny otwarcia</h3>
+                <div class="hours-list">
+                    <div class="hours-item">
+                        <span class="day">Poniedziałek</span>
+                        <span class="time closed">ZAMKNIĘTE</span>
+                    </div>
+                    <div class="hours-item">
+                        <span class="day">Wtorek</span>
+                        <span class="time">16:00 - 21:00</span>
+                    </div>
+                    <div class="hours-item">
+                        <span class="day">Środa</span>
+                        <span class="time">16:00 - 21:00</span>
+                    </div>
+                    <div class="hours-item">
+                        <span class="day">Czwartek</span>
+                        <span class="time">16:00 - 21:00</span>
+                    </div>
+                    <div class="hours-item">
+                        <span class="day">Piątek</span>
+                        <span class="time">12:00 - 21:00</span>
+                    </div>
+                    <div class="hours-item">
+                        <span class="day">Sobota</span>
+                        <span class="time">12:00 - 21:00</span>
+                    </div>
+                    <div class="hours-item">
+                        <span class="day">Niedziela</span>
+                        <span class="time">12:00 - 21:00</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
     <footer class="footer">
         <div class="footer-content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Abstrakcja to miejsce, gdzie kreatywność spotyka się z profesjonalizmem. Oferujemy wyjątkowe doświadczenia w zakresie strzelania, kręcenia, chlapania oraz eventów specjalnych. Nasz zespół doświadczonych instruktorów zapewni Ci bezpieczną i niezapomnianą przygodę.</p>
             <div class="footer-bottom">
                 <p>&copy; 2024 Abstrakcja. Wszystkie prawa zastrzeżone.</p>
             </div>
