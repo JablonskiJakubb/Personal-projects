@@ -13,9 +13,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Array of background images and corresponding titles
     const carouselData = [
-        { image: 'placeholder-image.png', title: 'Strzelanie', anchor: 'strzelanie' },
-        { image: 'placeholder-image.png', title: 'Kręcenie', anchor: 'krecenie' },
-        { image: 'placeholder-image.png', title: 'Chlapanie', anchor: 'chlapanie' }
+        { image: 'assets/IMG_8612.jpeg', title: 'Strzelanie', anchor: 'strzelanie' },
+        { image: 'assets/IMG_8622.jpeg', title: 'Kręcenie', anchor: 'krecenie' },
+        { image: 'assets/IMG_6928.jpeg', title: 'Chlapanie', anchor: 'chlapanie' }
     ];
     
     // Function to change background image and title
@@ -23,20 +23,35 @@ document.addEventListener('DOMContentLoaded', function() {
         const currentData = carouselData[index];
         const learnMoreButton = document.getElementById('learn-more-button');
         
-        // Update the CSS background-image of the #offer::before pseudo-element
-        let styleElement = document.getElementById('dynamic-bg-style');
-        if (!styleElement) {
-            styleElement = document.createElement('style');
-            styleElement.id = 'dynamic-bg-style';
-            document.head.appendChild(styleElement);
+        // Preload next image, then crossfade using ::after over ::before
+        const img = new Image();
+        img.src = currentData.image;
+
+        const offerEl = document.getElementById('offer');
+        if (!offerEl) return;
+
+        const proceed = () => {
+            // Set next image via CSS variable, avoiding style sheet re-creation churn
+            offerEl.style.setProperty('--offer-bg-next', `url('${currentData.image}')`);
+            // Fade in ::after
+            offerEl.classList.add('crossfade');
+            // After fade completes, commit to current
+            setTimeout(() => {
+                offerEl.style.setProperty('--offer-bg-current', `url('${currentData.image}')`);
+                offerEl.classList.remove('crossfade');
+                // Let the ::after stay rendered until opacity is fully 0, then clear it
+                setTimeout(() => {
+                    offerEl.style.setProperty('--offer-bg-next', 'none');
+                }, 50);
+            }, 420);
+        };
+
+        if (img.decode) {
+            img.decode().then(proceed).catch(proceed);
+        } else {
+            img.onload = proceed;
+            img.onerror = proceed;
         }
-        
-        styleElement.textContent = `
-            #offer::before {
-                background-image: url('${currentData.image}') !important;
-                transition: background-image 0.5s ease-in-out;
-            }
-        `;
         
         // Update the title with fade effect
         titleElement.style.opacity = '0';
@@ -67,7 +82,34 @@ document.addEventListener('DOMContentLoaded', function() {
     rightArrow.addEventListener('click', nextImage);
     leftArrow.addEventListener('click', previousImage);
     
-    // Initialize with first background and title
+    // Initialize with first background and title (preload and set via CSS var)
+    (function initFirst() {
+        const first = carouselData[0];
+        const img = new Image();
+        img.src = first.image;
+
+        const offerEl = document.getElementById('offer');
+        if (!offerEl) return;
+
+        const commit = () => {
+            offerEl.style.setProperty('--offer-bg-current', `url('${first.image}')`);
+            offerEl.style.setProperty('--offer-bg-next', 'none');
+        };
+
+        if (img.decode) {
+            img.decode().then(commit).catch(commit);
+        } else {
+            img.onload = commit;
+            img.onerror = commit;
+        }
+
+        // Also set title and link immediately
+        titleElement.textContent = first.title;
+        const learnMoreButton = document.getElementById('learn-more-button');
+        if (learnMoreButton) learnMoreButton.href = `oferta.html#${first.anchor}`;
+    })();
+
+    // After initializing, allow navigation
     changeBackgroundAndTitle(currentImageIndex);
     
     // Optional: Auto-play carousel (uncomment if you want automatic sliding)
