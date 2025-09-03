@@ -34,23 +34,33 @@
         </section>
     </header>
     <div class="container" id="eye-catcher">
-        <img src="placeholder-image.png" alt="zdjęcię/film" width="1600" height="900" loading="eager" decoding="async">
+        <video id="hero-video" autoplay muted loop playsinline poster="assets/IMG_6806.jpeg" width="1600" height="900">
+            <source src="assets/abstrakcja reels 3 promo.mp4" type="video/mp4">
+            <!-- Fallback image -->
+            <img src="assets/IMG_6806.jpeg" alt="Abstrakcja w akcji" width="1600" height="900" loading="eager" decoding="async">
+        </video>
     </div>
     <div class="container" id="About">
         <div class="about-creative-layout">
             <div class="about-image-container">
                 <div class="about-image-frame">
-                    <img src="placeholder-image.png" alt="About-us" width="1200" height="800" loading="lazy" decoding="async">
+                    <video class="about-video" controls playsinline poster="assets/IMG_6806.jpeg">
+                        <source src="assets/REELS 4 ATRAKCJE ABSTRAKCJA TATA LEKTOR.mp4" type="video/mp4">
+                        <img src="assets/IMG_6806.jpeg" alt="Abstrakcja w akcji" loading="lazy" decoding="async">
+                    </video>
                 </div>
             </div>
             
             <div class="about-title-container">
                 <h2 class="about-title">Abstrakcja</h2>
+                <h3> Rozlej kolory, odkryj radość tworzenia w Poznaniu!</h3>
             </div>
             
             <div class="about-content-container">
                 <div class="about-text-box">
-                    <p class="about-description">Witamy w świecie kreatywności i pasji! Jesteśmy miejscem, gdzie sztuka spotyka się z innowacją, a każdy projekt to nowa przygoda. Nasze doświadczenie i zaangażowanie sprawiają, że każde wyzwanie staje się okazją do stworzenia czegoś wyjątkowego.</p>
+                    <p class="about-description">Czas na wyjątkową, kreatywną przygodę w Poznaniu – idealną dla tych, którzy pragną przeżyć coś oryginalnego i pełnego koloru!
+                    Wejdź do świata, w którym wyobraźnia nie ma granic, a malowanie staje się czystą przyjemnością – bez stresu, bez ocen i bez potrzeby wcześniejszego doświadczenia.
+                    Zastanawiasz się, co ciekawego robić w Poznaniu? Szukasz nietypowej atrakcji, która pozwoli Ci się wyrazić i świetnie bawić? Odwiedź nas i przekonaj się, jak łatwo można stworzyć coś wyjątkowego – od serca, na płótnie.</p>
                 </div>
             </div>
         </div>
@@ -65,15 +75,8 @@
                 <p>Strzelanie</p>
                 <button class="carousel-arrow right-arrow" id="rightArrow">&#8250;</button>
             </div>
-            <a id="learn-more-button" href="oferta.html#">Dowiedz się więcej</a>
-            
-            <!-- Hidden images for background swapping -->
-            <div class="background-images" style="display: none;">
-                <img src="placeholder-image.png" alt="Image 1" class="bg-image active" data-bg="placeholder-image.png">
-                <img src="placeholder-image.png" alt="Image 2" class="bg-image" data-bg="placeholder-image.png">
-                <img src="placeholder-image.png" alt="Image 3" class="bg-image" data-bg="placeholder-image.png">
-            </div>
-        </div>
+            <a id="learn-more-button" href="oferta.html">Dowiedz się więcej</a>
+        </div><
     </div>
 
     <div class="container group-offers" id="group-offers">
@@ -81,17 +84,17 @@
             <h2>Oferta Grupowa</h2>
             <div class="group-content">
                 <div class="group-info">
-                    <p>Specjalne pakiety dla grup</p>
-                    <ul>
-                        <li>...</li>
-                        <li>...</li>
-                        <li>...</li>
-                        <li>...</li>
-                    </ul>
+                    <h4>twórzcie wspomnienia w kolorze!</h4>
+                    <p>
+                        Planujesz wyjątkowe urodziny, wieczór panieński lub kawalerski? A może chcesz zaskoczyć swój zespół nietypową imprezą firmową?
+                        U nas każda okazja nabiera kolorów!
+                        Zorganizuj kreatywne spotkanie, podczas którego nie tylko świetnie się bawicie, ale też tworzycie coś, co zostanie z Wami na długo – dosłownie! Farba, płótno                       i totalna swoboda twórcza to gwarancja niezapomnianych emocji.
+                        Bez względu na okazję – dajcie się ponieść wyobraźni i… nie bójcie się pobrudzić
+                    </p>
                     <a href="oferta.html#grupy" class="group-btn">Dowiedz się więcej</a>
                 </div>
                 <div class="group-image">
-                    <img src="placeholder-image.png" alt="Grupa ludzi" width="1200" height="800" loading="lazy" decoding="async">
+                    <img src="assets/IMG_8622.jpeg" alt="Oferta grupowa - Abstrakcja" width="1200" height="800" loading="lazy" decoding="async">
                 </div>
             </div>
         </div>
@@ -136,7 +139,7 @@
                     <div class="faq-card">
                         <div class="faq-card-inner">
                             <div class="faq-question-creative">
-                                <h3 class="faq-question-text">Jak długo trwa sesja?</h3>
+                                <h3 class="faq-question-text">W co się ubrać?</h3>
                                 <div class="faq-expand-icon">
                                     <span class="expand-line expand-line-1"></span>
                                     <span class="expand-line expand-line-2"></span>
@@ -144,7 +147,7 @@
                             </div>
                             <div class="faq-answer-creative">
                                 <div class="faq-answer-content">
-                                    <p>Standardowa sesja trwa około 60-90 minut, w zależności od wybranego pakietu. Zapewniamy pełne doświadczenie z czasem na przygotowanie i realizację.</p>
+                                    <p>Na miejscu dostaniecie od nas ochronny zestaw: płaszcz, ochraniacze na buty i rękawiczki – żebyście mogli tworzyć bez stresu. Ale pamiętajcie – używamy farb akrylowych, które co prawda łatwo schodzą z ciała i włosów, ale z ubrań… już niekoniecznie. Dlatego najlepiej załóżcie coś, czego nie będzie Wam żal ubrudzić. Stare jeansy? Luźny T-shirt? Idealnie! Lepiej postawić na luz i wygodę niż martwić się każdą kropką farby.</p>
                                 </div>
                             </div>
                         </div>
@@ -156,7 +159,7 @@
                     <div class="faq-card">
                         <div class="faq-card-inner">
                             <div class="faq-question-creative">
-                                <h3 class="faq-question-text">Czy potrzebne jest doświadczenie?</h3>
+                                <h3 class="faq-question-text">W jakim wieku mogą uczestniczyć osoby?</h3>
                                 <div class="faq-expand-icon">
                                     <span class="expand-line expand-line-1"></span>
                                     <span class="expand-line expand-line-2"></span>
@@ -164,7 +167,12 @@
                             </div>
                             <div class="faq-answer-creative">
                                 <div class="faq-answer-content">
-                                    <p>Absolutnie nie! Nasze aktywności są dostosowane do wszystkich poziomów zaawansowania. Nasz zespół przeprowadzi Cię przez cały proces krok po kroku.</p>
+                                    <p>Wymagania wiekowe różnią się w zależności od rodzaju aktywności:</p>
+                                    <ul>
+                                        <li>„Chlapanie” – od 3 lat</li>
+                                        <li>„Kręcenie” – od 5 lat</li>
+                                        <li>„Strzelanie” – od 16 lat lub młodsze dzieci pod opieką dorosłego</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -176,7 +184,7 @@
                     <div class="faq-card">
                         <div class="faq-card-inner">
                             <div class="faq-question-creative">
-                                <h3 class="faq-question-text">Jakie są opcje grupowe?</h3>
+                                <h3 class="faq-question-text">Czy mogę dokupić na miejscu płótno i nowy zestaw farb?</h3>
                                 <div class="faq-expand-icon">
                                     <span class="expand-line expand-line-1"></span>
                                     <span class="expand-line expand-line-2"></span>
@@ -184,7 +192,7 @@
                             </div>
                             <div class="faq-answer-creative">
                                 <div class="faq-answer-content">
-                                    <p>Oferujemy specjalne pakiety dla grup od 4 do 20 osób. Idealne na imprezy firmowe, urodziny czy wieczory panieńskie/kawalerskie!</p>
+                                    <p>Tak, istnieje taka możliwość zarówno poprzez nasz system rezerwacji online, jak i bezpośrednio w recepcji na miejscu. Dodatkowo, na miejscu można zakupić również pojedyncze kolory farb.</p>
                                 </div>
                             </div>
                         </div>
@@ -196,7 +204,7 @@
                     <div class="faq-card">
                         <div class="faq-card-inner">
                             <div class="faq-question-creative">
-                                <h3 class="faq-question-text">Co jest wliczone w cenę?</h3>
+                                <h3 class="faq-question-text">Czy dwie osoby mogą malować jedno płótno?</h3>
                                 <div class="faq-expand-icon">
                                     <span class="expand-line expand-line-1"></span>
                                     <span class="expand-line expand-line-2"></span>
@@ -204,7 +212,7 @@
                             </div>
                             <div class="faq-answer-creative">
                                 <div class="faq-answer-content">
-                                    <p>W cenę wliczony jest cały sprzęt, instruktaż, opieka instruktora oraz podstawowe materiały. Dodatkowo oferujemy pakiety z fotografią i filmowaniem.</p>
+                                    <p>Tak, na stanowiskach do „chlapania”, „kręcenia” oraz „strzelania” dwie osoby mogą wspólnie malować jedno płótno. Jeśli czas na to pozwala, istnieje również możliwość dokupienia drugiego płótna i stworzenia kolejnej pracy razem.</p>
                                 </div>
                             </div>
                         </div>
@@ -216,7 +224,7 @@
                     <div class="faq-card">
                         <div class="faq-card-inner">
                             <div class="faq-question-creative">
-                                <h3 class="faq-question-text">Jak wygląda rezerwacja?</h3>
+                                <h3 class="faq-question-text">Czy miejsce jest przystosowane dla osób z niepełnosprawnością?</h3>
                                 <div class="faq-expand-icon">
                                     <span class="expand-line expand-line-1"></span>
                                     <span class="expand-line expand-line-2"></span>
@@ -224,7 +232,7 @@
                             </div>
                             <div class="faq-answer-creative">
                                 <div class="faq-answer-content">
-                                    <p>Rezerwacji można dokonać online przez Booksy, telefonicznie lub osobiście. Zalecamy rezerwację z wyprzedzeniem, szczególnie w weekendy.</p>
+                                    <p>Tak, obiekt jest dostosowany do potrzeb osób z niepełnosprawnościami. Pod budynkiem znajdują się wyznaczone miejsca parkingowe, dostępny jest podjazd oraz winda. Dodatkowe udogodnienia zapewniają komfortowe i bezproblemowe korzystanie z przestrzeni.</p>
                                 </div>
                             </div>
                         </div>
@@ -232,56 +240,13 @@
                     </div>
                 </div>
 
-                <div class="faq-item-creative faq-item-6">
-                    <div class="faq-card">
-                        <div class="faq-card-inner">
-                            <div class="faq-question-creative">
-                                <h3 class="faq-question-text">Czy można anulować rezerwację?</h3>
-                                <div class="faq-expand-icon">
-                                    <span class="expand-line expand-line-1"></span>
-                                    <span class="expand-line expand-line-2"></span>
-                                </div>
-                            </div>
-                            <div class="faq-answer-creative">
-                                <div class="faq-answer-content">
-                                    <p>Tak, rezerwację można anulować do 24 godzin przed terminem bez dodatkowych opłat. W przypadku późniejszej anulacji pobieramy 50% wartości rezerwacji.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
+                
             </div>
         </div>
     </div>
 
     <div class="container contact" id="contact">
-        <div class="container-content contact left">
-            <h2>Kontakt</h2>
-            <form class="contact-form">
-                <div class="form-group">
-                    <label for="name">Imię <span class="required">*</span></label>
-                    <input type="text" id="name" name="name" placeholder="Wprowadź swoje imię" autocomplete="given-name" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="surname">Nazwisko <span class="required">*</span></label>
-                    <input type="text" id="surname" name="surname" placeholder="Wprowadź swoje nazwisko" autocomplete="family-name" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="email">Email <span class="required">*</span></label>
-                    <input type="email" id="email" name="email" placeholder="twoj.email@example.com" inputmode="email" autocomplete="email" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="message">Wiadomość <span class="required">*</span></label>
-                    <textarea id="message" name="message" rows="5" placeholder="Opisz swoją prośbę lub pytanie..." minlength="10" maxlength="1000" required></textarea>
-                </div>
-                
-                <button type="submit" class="submit-btn">Wyślij wiadomość</button>
-            </form>
-        </div>
+
         <div class="container-content contact right">
             <!-- Contact Section -->
             <div class="contact-section">
@@ -304,7 +269,7 @@
                 <div class="location-content">
                     <div class="address-info">
                         <span class="contact-label">Adres:</span>
-                        <span class="contact-value">Strzeszyńska 63, Poznan, Poland</span>
+                        <span class="contact-value">Strzeszyńska 63, Poznań – Galeria Podolany I piętro</span>
                     </div>
                     <div class="map-container">
                         <iframe 
