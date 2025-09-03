@@ -224,6 +224,7 @@ body {
     color: #ff0080;
     border: 2px solid #ffffff;
     margin-top: 30px;
+    text-align: center;
 }
 
 .segment-1 .segment-btn:hover {
@@ -256,6 +257,7 @@ body {
     background: linear-gradient(45deg, #ffffff, #f0f0f0);
     color: #0080ff;
     border: 2px solid #ffffff;
+    text-align: center;
 }
 
 .segment-2 .segment-btn:hover {
@@ -288,6 +290,7 @@ body {
     background: linear-gradient(45deg, #000000, #333333);
     color: #ffff80;
     border: 2px solid #000000;
+    text-align: center;
 }
 
 .segment-3 .segment-btn:hover {
@@ -320,6 +323,7 @@ body {
     background: linear-gradient(45deg, #000000, #333333);
     color: #00ff80;
     border: 2px solid #000000;
+    text-align: center;
 }
 
 .segment-4 .segment-btn:hover {
@@ -544,9 +548,13 @@ body {
 
 /* Mobile Navigation Styles */
 @media (max-width: 1024px) {
+    .segment-1{
+        margin-top: 200px;
+    }
     #menu {
         padding: 8px 4vw;
         gap: 0.15vw;
+        flex-wrap: wrap;
     }
     
     #menu .link {
@@ -566,15 +574,25 @@ body {
     }
     
     .container-content {
-        padding: 40px 30px;
+        padding: 32px 22px;
     }
     
     .segment-text h2 {
-        font-size: 2.5rem;
+        font-size: 2.15rem;
+        letter-spacing: 1.2px;
+        margin-bottom: 0.8rem;
     }
     
-    .segment-text p {
-        font-size: 1.1rem;
+    .segment-text h3 {
+        font-size: 1.05rem;
+        margin: 0.5rem 0 0.4rem;
+        letter-spacing: 0.4px;
+    }
+    
+    .segment-text p,
+    .segment-text li {
+        font-size: 0.98rem;
+        line-height: 1.5;
     }
 }
 
@@ -881,6 +899,9 @@ body {
     }
     .segment-image img{
         height: 400px;
+    }
+    .segment-1{
+        margin-top: 110px;
     }
 }
 
