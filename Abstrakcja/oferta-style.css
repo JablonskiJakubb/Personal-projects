@@ -29,7 +29,7 @@ body {
     background-size: 300% 300%;
     animation: headerGradientFlow 8s ease-in-out infinite;
     text-align: center;
-    padding: 25px 15vw;
+    padding: 16px 10vw;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
@@ -106,12 +106,12 @@ body {
 }
 
 #logo img {
-    height: 100px;
+    height: 72px;
     width: auto;
     transition: all 0.3s ease;
     background-color: white;
-    border-radius: 30px;
-    padding: 10px;
+    border-radius: 20px;
+    padding: 8px;
 }
 
 #logo:hover img {
@@ -124,16 +124,16 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15px;
-    padding: 20px 15px;
+    gap: 10px;
+    padding: 14px 10px;
 }
 
 .social-link {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 75px;
-    height: 75px;
+    width: 56px;
+    height: 56px;
     border-radius: 50%;
     color: #ffffff;
     transition: all 0.3s ease;
@@ -164,12 +164,20 @@ body {
 .social-link.instagram:hover {
     background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
     color: #ffffff;
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4), 0 6px 20px rgba(225, 48, 108, 0.3);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35), 0 4px 12px rgba(225, 48, 108, 0.25);
+}
+
+/* TikTok brand styling */
+.social-link.tiktok { background: rgba(0, 0, 0, 0.25); }
+.social-link.tiktok:hover {
+    background: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35), 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
 .social-link svg {
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
     transition: all 0.3s ease;
 }
 
@@ -194,7 +202,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 80px 20px 20px 20px; /* thinner */
+    padding: 100px 20px 20px 20px; /* thinner */
     box-sizing: border-box;
 }
 
@@ -211,6 +219,7 @@ body {
 }
 
 .segment-1 h2 {
+    padding-top: 40px;
     color: #ffffff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
@@ -548,51 +557,65 @@ body {
 
 /* Mobile Navigation Styles */
 @media (max-width: 1024px) {
-    .segment-1{
-        margin-top: 200px;
-    }
     #menu {
-        padding: 8px 4vw;
+        padding: 6px 3vw;
         gap: 0.15vw;
         flex-wrap: wrap;
     }
     
     #menu .link {
-        font-size: 0.95rem;
-        padding: 8px 6px;
-        letter-spacing: 0.8px;
+        font-size: 0.88rem;
+        padding: 6px 6px;
+        letter-spacing: 0.5px;
     }
     
     #logo {
-        font-size: 1rem;
-        padding: 8px 6px;
+        font-size: 0.95rem;
+        padding: 6px 6px;
     }
     
     #logo img {
-        height: 64px;
+        height: 56px;
         padding: 6px;
     }
     
     .container-content {
-        padding: 32px 22px;
+        padding: 24px 16px;
+    }
+
+    .segment-text {
+        padding: 16px 14px;
+        margin: 0 auto;
     }
     
     .segment-text h2 {
-        font-size: 2.15rem;
-        letter-spacing: 1.2px;
-        margin-bottom: 0.8rem;
+        font-size: 1.65rem;
+        letter-spacing: 0.9px;
+        margin-bottom: 0.6rem;
     }
-    
+
     .segment-text h3 {
-        font-size: 1.05rem;
-        margin: 0.5rem 0 0.4rem;
-        letter-spacing: 0.4px;
+        font-size: 0.98rem;
+        margin: 0.4rem 0 0.3rem;
+        letter-spacing: 0.25px;
     }
     
     .segment-text p,
     .segment-text li {
-        font-size: 0.98rem;
-        line-height: 1.5;
+        font-size: 0.9rem;
+        line-height: 1.2;
+        margin-bottom: 0.7rem;
+    }
+
+    .segment-text ul {
+        margin: 0 0 0.4rem 0.6rem;
+        padding-left: 0.6rem;
+    }
+    
+    .segment-btn {
+        font-size: 0.93rem;
+        padding: 10px 20px;
+        margin-top: 12px;
     }
 }
 
@@ -739,7 +762,7 @@ body {
        Row 1: logo, Strona Główna, social media
        Row 2: other links */
     #menu > section {
-        flex: 1 0 calc(33.333% - 0.4rem);
+        flex: 1 0 calc(20% - 0.4rem);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -802,7 +825,7 @@ body {
 
 @media (max-width: 360px) {
     /* Make logo column narrower on 360px devices */
-    #menu > #logo { flex: 0 0 20%; }
+    #menu > #logo { flex: 0 0 20% + 200px; }
     .segment-1 {
         margin-top: 120px;
     }
@@ -892,7 +915,7 @@ body {
 }
 @media (max-width: 375px) {
     #menu > section {
-    flex: 1 0 calc(25% - 0.4rem);
+    flex: 1 0 calc(20% + 200px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -909,4 +932,11 @@ body {
     .segment-1{
         margin-top: 120px;
     }
+}
+@media (min-width: 1000px){
+    .segment-image img{
+        height: 90%;
+        width: 80%;
+    }
+
 }
