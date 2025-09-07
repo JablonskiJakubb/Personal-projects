@@ -930,7 +930,7 @@ body {
 
 @media (min-width: 1200px){
     .segment-1{
-        margin-top: 120px;
+        margin-top: 150px;
     }
 }
 @media (min-width: 1000px){
@@ -940,3 +940,4 @@ body {
     }
 
 }
+
