@@ -121,7 +121,7 @@ button,
     background-size: 300% 300%;
     animation: headerGradientFlow 8s ease-in-out infinite;
     text-align: center;
-    padding: 25px 15vw;
+    padding: 16px 10vw;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
@@ -148,7 +148,7 @@ button,
     text-align: center;
     color: #ffffff;
     font-weight: 900;
-    padding: 20px 12px;
+    padding: 12px 10px;
     transition: all 0.3s ease;
     cursor: pointer;
     font-size: 1.1rem;
@@ -185,16 +185,16 @@ button,
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15px;
-    padding: 20px 15px;
+    gap: 10px;
+    padding: 14px 10px;
 }
 
 .social-link {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 75px;
-    height: 75px;
+    width: 56px;
+    height: 56px;
     border-radius: 50%;
     color: #ffffff;
     transition: all 0.3s ease;
@@ -226,12 +226,20 @@ button,
 .social-link.instagram:hover {
     background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
     color: #ffffff;
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4), 0 6px 20px rgba(225, 48, 108, 0.3);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35), 0 4px 12px rgba(225, 48, 108, 0.25);
+}
+
+/* TikTok brand styling */
+.social-link.tiktok { background: rgba(0, 0, 0, 0.25); }
+.social-link.tiktok:hover {
+    background: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35), 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
 .social-link svg {
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
     transition: all 0.3s ease;
 }
 
@@ -256,12 +264,12 @@ button,
 }
 
 #logo img {
-    height: 100px;
+    height: 72px;
     width: auto;
     transition: all 0.3s ease;
     background-color: white;
-    border-radius: 30px;
-    padding: 10px;
+    border-radius: 20px;
+    padding: 8px;
 }
 
 #logo:hover img {
@@ -1033,6 +1041,49 @@ button,
 
 /* Fade in next image over current */
 #offer.crossfade::after {
+    opacity: 1;
+}
+
+/* Background video mode for Offer */
+#offer.use-video::before,
+#offer.use-video::after {
+    background-image: none !important; /* disable image-based backgrounds */
+    transition: none;
+}
+
+/* Use ::before as a subtle overlay when videos are active */
+#offer.use-video::before {
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.2);
+    background-blend-mode: normal;
+    z-index: 1; /* above videos, below content */
+}
+
+/* Not used in video mode */
+#offer.use-video::after {
+    opacity: 0;
+}
+
+/* Ensure content stays on top in video mode */
+#offer.use-video .container-content.offer {
+    position: relative;
+    z-index: 2;
+}
+
+/* Background videos stacked under overlay/content */
+.offer-bg-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    opacity: 0;
+    transition: opacity 400ms ease-in-out;
+    pointer-events: none; /* keep interactions on content */
+}
+
+.offer-bg-video.visible {
     opacity: 1;
 }
 
@@ -2064,7 +2115,7 @@ button,
 }
 
 .faq-item-creative.active .faq-answer-creative {
-    max-height: 200px;
+    max-height: 2000px; /* allow long answers on small screens */
     padding: 1.5rem 0;
 }
 
