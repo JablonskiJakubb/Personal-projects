@@ -1,6 +1,5 @@
-// Background Image Carousel Functionality
+// Background Video Carousel Functionality
 document.addEventListener('DOMContentLoaded', function() {
-    const backgroundImages = document.querySelectorAll('.bg-image');
     const leftArrow = document.getElementById('leftArrow');
     const rightArrow = document.getElementById('rightArrow');
     const offerSection = document.getElementById('offer');
@@ -9,120 +8,111 @@ document.addEventListener('DOMContentLoaded', function() {
     // Guard if carousel elements don't exist (e.g., on oferta.html)
     if (!offerSection || !leftArrow || !rightArrow || !titleElement) return;
     
-    let currentImageIndex = 0;
-    
-    // Array of background images and corresponding titles
+    let currentIndex = 0;
+
+    // Map images to respective videos
     const carouselData = [
-        { image: 'assets/IMG_8612.jpeg', title: 'Strzelanie', anchor: 'strzelanie' },
-        { image: 'assets/IMG_8622.jpeg', title: 'Kręcenie', anchor: 'krecenie' },
-        { image: 'assets/IMG_6928.jpeg', title: 'Chlapanie', anchor: 'chlapanie' }
+        { video: 'assets/Strzelanie_film.mp4', title: 'Strzelanie', anchor: 'strzelanie' },
+        { video: 'assets/Kręcenie_Film.mp4', title: 'Kręcenie', anchor: 'krecenie' },
+        { video: 'assets/Chlapanie_film.mp4', title: 'Chlapanie', anchor: 'chlapanie' }
     ];
-    
-    // Function to change background image and title
+
+    // Prepare video elements for crossfade (two videos toggled)
+    offerSection.classList.add('use-video');
+    const videoA = document.createElement('video');
+    const videoB = document.createElement('video');
+    [videoA, videoB].forEach(v => {
+        v.className = 'offer-bg-video';
+        v.muted = true;
+        v.loop = true;
+        v.playsInline = true;
+        v.setAttribute('playsinline', '');
+        v.setAttribute('muted', '');
+        v.setAttribute('autoplay', '');
+        // Prevent tab stop/focus
+        v.setAttribute('tabindex', '-1');
+    });
+
+    // Insert videos behind the content panel
+    offerSection.appendChild(videoA);
+    offerSection.appendChild(videoB);
+
+    let isAActive = true; // which video is currently visible
+
+    function setVideoSource(videoEl, src) {
+        if (videoEl.getAttribute('src') !== src) {
+            videoEl.setAttribute('src', src);
+            // load() ensures new source is applied before play
+            try { videoEl.load(); } catch (_) {}
+        }
+        // Attempt autoplay; ignore promise rejection (mobile policies)
+        const p = videoEl.play();
+        if (p && typeof p.catch === 'function') p.catch(() => {});
+    }
+
     function changeBackgroundAndTitle(index) {
         const currentData = carouselData[index];
         const learnMoreButton = document.getElementById('learn-more-button');
-        
-        // Preload next image, then crossfade using ::after over ::before
-        const img = new Image();
-        img.src = currentData.image;
 
-        const offerEl = document.getElementById('offer');
-        if (!offerEl) return;
+        const incoming = isAActive ? videoB : videoA;
+        const outgoing = isAActive ? videoA : videoB;
 
-        const proceed = () => {
-            // Set next image via CSS variable, avoiding style sheet re-creation churn
-            offerEl.style.setProperty('--offer-bg-next', `url('${currentData.image}')`);
-            // Fade in ::after
-            offerEl.classList.add('crossfade');
-            // After fade completes, commit to current
-            setTimeout(() => {
-                offerEl.style.setProperty('--offer-bg-current', `url('${currentData.image}')`);
-                offerEl.classList.remove('crossfade');
-                // Let the ::after stay rendered until opacity is fully 0, then clear it
-                setTimeout(() => {
-                    offerEl.style.setProperty('--offer-bg-next', 'none');
-                }, 50);
-            }, 420);
+        // Prepare incoming video and crossfade
+        setVideoSource(incoming, currentData.video);
+
+        // Start crossfade once the video has enough data
+        const fadeIn = () => {
+            incoming.classList.add('visible');
+            outgoing.classList.remove('visible');
+            isAActive = !isAActive;
         };
 
-        if (img.decode) {
-            img.decode().then(proceed).catch(proceed);
+        if (incoming.readyState >= 2) {
+            fadeIn();
         } else {
-            img.onload = proceed;
-            img.onerror = proceed;
+            const onReady = () => { incoming.removeEventListener('loadeddata', onReady); fadeIn(); };
+            incoming.addEventListener('loadeddata', onReady);
         }
-        
+
         // Update the title with fade effect
         titleElement.style.opacity = '0';
         setTimeout(() => {
             titleElement.textContent = currentData.title;
             titleElement.style.opacity = '1';
-            
-            // Update the learn more button href using ASCII anchor ids
-            if (learnMoreButton) {
-                learnMoreButton.href = `oferta.html#${currentData.anchor}`;
-            }
-        }, 250); // Half of the transition time for smooth effect
+            if (learnMoreButton) learnMoreButton.href = `oferta.html#${currentData.anchor}`;
+        }, 250);
     }
-    
-    // Function to go to next image
-    function nextImage() {
-        currentImageIndex = (currentImageIndex + 1) % carouselData.length;
-        changeBackgroundAndTitle(currentImageIndex);
+
+    function nextItem() {
+        currentIndex = (currentIndex + 1) % carouselData.length;
+        changeBackgroundAndTitle(currentIndex);
     }
-    
-    // Function to go to previous image
-    function previousImage() {
-        currentImageIndex = (currentImageIndex - 1 + carouselData.length) % carouselData.length;
-        changeBackgroundAndTitle(currentImageIndex);
+
+    function previousItem() {
+        currentIndex = (currentIndex - 1 + carouselData.length) % carouselData.length;
+        changeBackgroundAndTitle(currentIndex);
     }
-    
+
     // Event listeners for arrows
-    rightArrow.addEventListener('click', nextImage);
-    leftArrow.addEventListener('click', previousImage);
-    
-    // Initialize with first background and title (preload and set via CSS var)
+    rightArrow.addEventListener('click', nextItem);
+    leftArrow.addEventListener('click', previousItem);
+
+    // Initialize first video, title and link
     (function initFirst() {
         const first = carouselData[0];
-        const img = new Image();
-        img.src = first.image;
-
-        const offerEl = document.getElementById('offer');
-        if (!offerEl) return;
-
-        const commit = () => {
-            offerEl.style.setProperty('--offer-bg-current', `url('${first.image}')`);
-            offerEl.style.setProperty('--offer-bg-next', 'none');
-        };
-
-        if (img.decode) {
-            img.decode().then(commit).catch(commit);
-        } else {
-            img.onload = commit;
-            img.onerror = commit;
-        }
-
-        // Also set title and link immediately
+        setVideoSource(videoA, first.video);
+        videoA.classList.add('visible');
         titleElement.textContent = first.title;
         const learnMoreButton = document.getElementById('learn-more-button');
         if (learnMoreButton) learnMoreButton.href = `oferta.html#${first.anchor}`;
     })();
 
-    // After initializing, allow navigation
-    changeBackgroundAndTitle(currentImageIndex);
-    
-    // Optional: Auto-play carousel (uncomment if you want automatic sliding)
-    /*
-    setInterval(nextImage, 4000); // Change image every 4 seconds
-    */
-    
     // Optional: Keyboard navigation
     document.addEventListener('keydown', function(e) {
         if (e.key === 'ArrowLeft') {
-            previousImage();
+            previousItem();
         } else if (e.key === 'ArrowRight') {
-            nextImage();
+            nextItem();
         }
     });
 });
