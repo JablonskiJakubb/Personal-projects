@@ -1,0 +1,84 @@
+
+.profile-container {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            max-width: 1000px;
+            margin: 4rem auto;
+            padding: 2rem;
+            background: #f9f9f9;
+            border-radius: 1.5rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            justify-content: center;
+        }
+        .profile-image {
+            
+            height: 100%;
+        }
+        .profile-image img {
+            height: 800px;
+            max-width: 400px;
+            border-radius: 1rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .profile-info {
+            flex: 1;
+            color: #454B54; /* Slate Gray */
+        }
+        .profile-info h1 {
+            color: #87A99C; /* Sage Green */
+            margin-top: 0;
+            font-size: 2.5rem;
+        }
+        .profile-info h2 {
+            color: #87A99C;
+            font-size: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        .profile-info p {
+            line-height: 1.6;
+            font-size: 1.1rem;
+        }
+        .specializations {
+            list-style: none;
+            padding: 0;
+        }
+        .specializations li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        .contact-details {
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #ccc;
+        }
+        .contact-details p {
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+        .contact-details strong {
+            color: #87A99C;
+        }
+        .hours-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 0.5rem;
+        }
+        .hours-list li {
+            display: flex;
+            justify-content: space-between;
+            max-width: 250px;
+            margin-bottom: 0.3rem;
+        }
+        @media (max-width: 768px) {
+            .profile-container {
+                flex-direction: column;
+                align-items: center;
+                margin: 2rem;
+            }
+            .profile-image {
+                flex: 0 0 auto;
+                width: 100%;
+            }
+        }

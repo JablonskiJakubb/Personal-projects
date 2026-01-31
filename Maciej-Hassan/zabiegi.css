@@ -1,0 +1,31 @@
+
+
+.services-list {
+            max-width: 800px;
+            margin: 2rem auto;
+            text-align: left;
+            padding: 2rem;
+            background: #f9f9f9;
+            border-radius: 1rem;
+        }
+        .service-item {
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 1rem;
+            overflow: hidden;
+        }
+        .service-item h3 {
+            color: #87A99C;
+            margin-bottom: 0.5rem;
+        }
+        .service-item p {
+            max-height: 0;
+            margin: 0;
+            opacity: 0;
+            transition: all 0.5s ease;
+        }
+        .service-item:hover p {
+            max-height: 100px;
+            margin-top: 0.5rem;
+            opacity: 1;
+        }
