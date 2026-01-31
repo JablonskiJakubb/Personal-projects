@@ -119,3 +119,46 @@ footer {
     color: #454B54;
     box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
 }
+
+/* <-------------------- media queries --------------------> */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 1rem;
+        height: auto;
+    }
+
+    header img {
+        width: 15rem;
+        height: 6rem;
+    }
+
+    header nav {
+        margin-left: 0;
+        margin-top: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    header button {
+        padding: 0.8rem 1.5rem;
+        font-size: 1.2rem;
+        margin: 0.3rem;
+    }
+
+    .content {
+        height: auto;
+        min-height: 50vh;
+        font-size: 1.4rem;
+    }
+
+    #eyecatcher h1 {
+        font-size: 3rem;
+    }
+
+    #about p {
+        height: auto;
+        min-height: 200px;
+    }
+}

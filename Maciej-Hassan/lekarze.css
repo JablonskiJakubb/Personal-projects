@@ -66,3 +66,24 @@ main {
     background-color: #87A99C;
 }
 
+@media (max-width: 768px) {
+    .carousel {
+        width: 90vw;
+    }
+
+    .carousel-item img {
+        width: 90vw;
+        max-height: 50vh;
+    }
+
+    .btn {
+        padding: 8px;
+        font-size: 16px;
+    }
+
+    .appointment-button {
+        font-size: 16px;
+        padding: 6px 12px;
+    }
+}
+

@@ -70,5 +70,14 @@
         @media (max-width: 768px) {
             .contact-container {
                 grid-template-columns: 1fr;
+                margin: 2rem 1rem;
+                gap: 2rem;
+                padding: 1rem;
+            }
+            .map-placeholder {
+                height: 200px;
+            }
+            .creative-card {
+                padding: 1.5rem;
             }
         }

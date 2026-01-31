@@ -29,3 +29,29 @@
             margin-top: 0.5rem;
             opacity: 1;
         }
+
+@media (max-width: 768px) {
+    main {
+        height:100vh;
+    }
+    .services-list {
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    .service-item h3 {
+        font-size: 1.2rem;
+    }
+
+    .service-item p {
+        font-size: 1rem;
+    }
+    
+    /* On mobile, maybe show the description by default or make it more obvious it can be toggled */
+    .service-item:active p,
+    .service-item:focus p {
+        max-height: 200px;
+        opacity: 1;
+        margin-top: 0.5rem;
+    }
+}
