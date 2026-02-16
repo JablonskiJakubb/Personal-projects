@@ -1,76 +1,158 @@
 
 .profile-container {
-            display: flex;
-            align-items: center;
-            gap: 3rem;
-            max-width: 1000px;
-            margin: 4rem auto;
-            padding: 2rem;
-            background: #f9f9f9;
-            border-radius: 1.5rem;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-            justify-content: center;
-        }
-        .profile-image {
-            
-            height: 100%;
-        }
-        .profile-image img {
-            height: 800px;
-            max-width: 400px;
-            border-radius: 1rem;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-        .profile-info {
-            flex: 1;
-            color: #454B54; /* Slate Gray */
-        }
-        .profile-info h1 {
-            color: #87A99C; /* Sage Green */
-            margin-top: 0;
-            font-size: 2.5rem;
-        }
-        .profile-info h2 {
-            color: #87A99C;
-            font-size: 1.5rem;
-            margin-top: 1.5rem;
-        }
-        .profile-info p {
-            line-height: 1.6;
-            font-size: 1.1rem;
-        }
-        .specializations {
-            list-style: none;
-            padding: 0;
-        }
-        .specializations li {
-            margin-bottom: 0.8rem;
-            padding-left: 1.5rem;
-            position: relative;
-        }
-        .contact-details {
-            margin-top: 2rem;
-            padding-top: 1.5rem;
-            border-top: 1px solid #ccc;
-        }
-        .contact-details p {
-            margin-bottom: 0.5rem;
-            font-size: 1rem;
-        }
-        .contact-details strong {
-            color: #87A99C;
-        }
-        .hours-list {
-            list-style: none;
-            padding: 0;
-            margin-top: 0.5rem;
-        }
-        .hours-list li {
-            display: flex;
-            justify-content: space-between;
-            max-width: 250px;
-            margin-bottom: 0.3rem;
-        }
+    max-width: 1000px;
+    margin: 4rem auto;
+    padding: 3rem;
+    background: #ffffff;
+    border-radius: 2rem;
+    box-shadow: 0 15px 50px rgba(176, 125, 141, 0.08);
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.profile-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 60px rgba(176, 125, 141, 0.12);
+}
+
+.profile-image {
+    float: left;
+    margin-right: 3rem;
+    margin-bottom: 2rem;
+    width: 350px;
+}
+
+.profile-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 2rem;
+    box-shadow: 0 8px 25px rgba(176, 125, 141, 0.1);
+    object-fit: cover;
+    display: block;
+}
+
+.profile-info {
+    color: #5d5d5d;
+}
+
+.profile-info h1 {
+    color: #b07d8d;
+    margin-top: 2rem;
+    font-size: 2.8rem;
+    font-weight: normal;
+    margin-bottom: 1rem;
+}
+
+.profile-info h2 {
+    color: #b07d8d;
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    font-weight: normal;
+    clear: both;
+}
+
+.profile-info p {
+    line-height: 1.8;
+    font-size: 1.15rem;
+    margin-bottom: 1.5rem;
+}
+
+.specializations {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+.specializations li {
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+    position: relative;
+}
+
+.specializations li::before {
+    content: "➤";
+    position: absolute;
+    left: 0;
+    color: #f8bbd0;
+}
+
+.contact-details {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 2px solid #fce4ec;
+    clear: both;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin-top: 1.5rem;
+}
+
+.contact-column p {
+    margin-bottom: 1rem;
+}
+
+.contact-details strong {
+    color: #b07d8d;
+}
+
+.hours-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.hours-list li {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 350px;
+    margin-bottom: 0.5rem;
+    padding: 0.4rem 0;
+    border-bottom: 1px dashed #fce4ec;
+}
+
+.hours-list li:last-child {
+    border-bottom: none;
+}
+
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .hours-list li {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .profile-container {
+        padding: 2rem;
+        margin: 1rem;
+    }
+    
+    .profile-image {
+        float: none;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+    
+    .profile-image img {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    
+    .profile-info h1 {
+        font-size: 2.2rem;
+        text-align: center;
+    }
+}
         @media (max-width: 768px) {
             .profile-container {
                 flex-direction: column;
