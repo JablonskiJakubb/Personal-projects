@@ -1210,7 +1210,7 @@ button,
 
 /* Group Offers Section */
 .container.group-offers {
-    height: 75vh;
+    height: 90vh;
     width: 100%;
     box-sizing: border-box;
     position: relative;
@@ -1387,18 +1387,22 @@ button,
 
 
 .group-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     text-decoration: none;
     background: #ff0080;
     color: #ffffff;
     border: 3px solid #ffff80;
-    padding: 18px 35px;
-    font-size: 1.2rem;
+    padding: 15px 25px;
+    font-size: 1.1rem;
     font-weight: 900;
     border-radius: 25px;
     cursor: pointer;
     transition: all 0.3s ease;
     text-transform: uppercase;
     letter-spacing: 1px;
+    margin: 5px;
 }
 
 .group-btn:hover {
@@ -1600,10 +1604,6 @@ button,
         flex: 2;
     }
     
-    .group-image {
-        flex: 1;
-        min-width: 200px;
-    }
     
     .container.group-offers h2 {
         font-size: 2rem;
@@ -1624,12 +1624,13 @@ button,
         padding: 12px 25px;
         font-size: 1rem;
     }
-    
+    .group-image {
+        flex: 1;
+        min-width: 300px;
+    }
     .group-image img {
-        max-width: 90%;
+        width: 60vh;
         height: auto;
-        max-height: 250px;
-        object-fit: cover;
     }
 }
 
@@ -1649,7 +1650,7 @@ button,
     }
     
     .group-info {
-        padding: 30px 5 px;
+        padding: 30px 15px;
     }
     
     .group-info p {
@@ -3212,5 +3213,10 @@ button,
         border-radius: 20px;
         box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
         margin: 0 auto;     /* ensure centering */
+    }
+}
+@media (min-width: 800px) and  (min-height: 1000px){
+    #social-media{
+        display: block;
     }
 }

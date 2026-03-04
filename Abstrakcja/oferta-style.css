@@ -341,6 +341,165 @@ body {
     border-color: #000000;
 }
 
+/* Segment 5 - Birthday Section Refined */
+.segment-5 {
+    height: auto;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1a0a2e, #2e0a1a); /* Darker, themed with other segments */
+    position: relative;
+    overflow: hidden;
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.segment-5::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        radial-gradient(circle at 20% 20%, rgba(255, 0, 128, 0.15) 1px, transparent 1px),
+        radial-gradient(circle at 80% 20%, rgba(0, 128, 255, 0.15) 1px, transparent 1px),
+        radial-gradient(circle at 50% 50%, rgba(255, 255, 128, 0.1) 1px, transparent 1px);
+    background-size: 60px 60px, 80px 80px, 100px 100px;
+    background-position: 0 0, 30px 30px, 50px 50px;
+    z-index: 1;
+    opacity: 0.6;
+}
+
+.birthday-card-container {
+    position: relative;
+    z-index: 2;
+    width: 90%;
+    max-width: 1100px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+    padding: 60px;
+    color: white;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+.birthday-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.birthday-header h2 {
+    font-size: 3rem !important;
+    color: #ffffff !important;
+    text-transform: uppercase !important;
+    letter-spacing: 2px !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5) !important;
+    margin-bottom: 20px !important;
+    -webkit-text-fill-color: initial !important;
+    background: none !important;
+}
+
+.birthday-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.birthday-section-box {
+    background: rgba(255, 255, 255, 0.07);
+    border-radius: 15px;
+    padding: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.birthday-section-box:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.birthday-section-box h3 {
+    color: #ffffff !important;
+    font-size: 1.3rem !important;
+    margin-bottom: 20px !important;
+    border-bottom: 2px solid #ff0080;
+    padding-bottom: 10px;
+    font-weight: 800 !important;
+}
+
+.birthday-section-box ul {
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.birthday-section-box li {
+    margin-bottom: 12px !important;
+    padding-left: 25px !important;
+    position: relative;
+    font-size: 1rem !important;
+    line-height: 1.5 !important;
+    color: #ffffff !important;
+}
+
+.birthday-section-box li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #ff0080;
+    font-weight: bold;
+}
+
+.birthday-footer-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 40px;
+}
+
+.info-item h4 {
+    color: #ff0080;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+.info-item p {
+    color: #ffffff !important;
+    font-size: 0.95rem !important;
+}
+
+.segment-5 .segment-btn {
+    background: #ff0080;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    padding: 15px 35px;
+    font-size: 1.1rem;
+    font-weight: 900;
+    border-radius: 25px;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+}
+
+.segment-5 .segment-btn:hover {
+    background: #ffffff;
+    color: #ff0080;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(255, 0, 128, 0.2);
+}
+
+@media (max-width: 768px) {
+    .segment-5 { padding: 60px 0; }
+    .birthday-card-container { padding: 30px; border-radius: 20px; }
+    .birthday-header h2 { font-size: 2.2rem !important; }
+}
+
 /* Text Content Styles */
 .segment-text {
     border-radius: 15px;
@@ -502,10 +661,11 @@ body {
 /* Footer Section */
 .footer {
     width: 100%;
-    background: linear-gradient(135deg, #1a2f1a, #2d4a2d, #1a2f1a);
+    background: linear-gradient(135deg, #2c3e50, #34495e, #2c3e50);
     color: #ffffff;
     padding: 25px 0 15px 0;
     position: relative;
+    border-top: 3px solid #3f51b5;
     box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.15);
 }
 
@@ -516,7 +676,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 255, 136, 0.05);
+    background: rgba(63, 81, 181, 0.05);
     z-index: 0;
 }
 
@@ -598,6 +758,9 @@ body {
         font-size: 0.98rem;
         margin: 0.4rem 0 0.3rem;
         letter-spacing: 0.25px;
+    }
+    .segment-1{
+        margin-top: 90px;
     }
     
     .segment-text p,
@@ -827,7 +990,7 @@ body {
     /* Make logo column narrower on 360px devices */
     #menu > #logo { flex: 0 0 20% + 200px; }
     .segment-1 {
-        margin-top: 120px;
+        padding-top: 190px;
     }
 }
 
@@ -836,7 +999,7 @@ body {
         margin-top: 100px;
     }
     .container {
-        padding-top: 60px; /* thinner */
+        padding-top: 130px; /* thinner */
     }
     
     .container-content {
@@ -913,9 +1076,8 @@ body {
         flex: 1 0 calc(4% - 0.4rem); /* 2 per row for readability */
     }
 }
-@media (max-width: 375px) {
+@media (max-width: 415px) {
     #menu > section {
-    flex: 1 0 calc(20% + 200px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -925,6 +1087,9 @@ body {
     }
     .segment-1{
         margin-top: 110px;
+    }
+    .segment-1 {
+        padding-top: 190px;
     }
 }
 
@@ -940,4 +1105,49 @@ body {
     }
 
 }
+@media (min-width: 900px) and  (min-height: 1000px){
+    .segment-image img{
+        height: 70%;
+        width: 80%;
+    }
+    #menu{
+        padding: 20px 5vw;
+    }
+    #menu #logo img{
+        height: 90px;
+    }
+    #menu .link{
+        font-size: 1rem;
+    }
+}
+@media (min-width: 500px) and (max-height: 1000px){
+    #menu > section:nth-child(2) { order: 1; } /* Strona Główna */
+    #social-media { order: 3; }
 
+    /* Remaining nav items go to next rows */
+    #menu > section:nth-child(3),
+    #menu > section:nth-child(4),
+    #menu > section:nth-child(5),
+    #menu > section:nth-child(6) {
+        order: 2;
+    }
+    #menu #logo{
+        flex: auto;
+    }
+}
+
+@media (min-width: 1000px) and (max-height: 800px){
+    .segment{
+        height: 80vw;
+    }
+    #menu #logo{
+        flex: auto;
+    }
+    .container-content{
+        padding: 40px 20px 20px 20px;
+    }
+    .segment img{
+        height: 80%;
+        width: auto;
+    }
+}
