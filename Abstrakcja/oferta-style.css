@@ -1,6 +1,6 @@
 /* Font Loading Optimization - moved to HTML via <link>, keeping here commented to avoid double load */
 /* @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&subset=latin,latin-ext&display=block'); */
-
+#menu > section:nth-child(7) { order: 3 ; }
 /* Reset and Base Styles */
 * {
     margin: 0;
