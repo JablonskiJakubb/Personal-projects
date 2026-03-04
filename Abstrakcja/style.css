@@ -658,7 +658,7 @@ button,
 
         display: flex !important;
         flex-wrap: wrap;
-        justify-content: flex-start;
+        justify-content: center;
         align-content: flex-start;
         align-items: flex-start;
         width: 100%;
@@ -667,10 +667,9 @@ button,
     }
     
     #menu section {
-        display: flex !important;
+
         align-items: center;
         justify-content: center;
-        gap: 0.01rem;
     }
     
     /* Logo - Top row, left */
@@ -682,16 +681,22 @@ button,
     /* O nas, Oferta, Grupy, FAQ, Kontakt - Bottom row */
     #menu section:nth-child(2),
     #menu section:nth-child(3), 
-    #menu section:nth-child(4),
+    
     #menu section:nth-child(5),
     #menu section:nth-child(6) {
         order: 10;
-        flex: 0 0 20%; /* exactly five equal columns */
+        flex: 0 0 18%; /* exactly five equal columns */
         margin-top: 6px;
         min-width: 0;
         max-width: 18%;
     }
-    
+    #menu section:nth-child(4){
+        order: 10;
+        flex: 0 0 35%; /* exactly five equal columns */
+        margin-top: 6px;
+        min-width: 0;
+        max-width: 35%; /* make "Grupy" wider to accommodate longer text */
+    }
     /* Rezerwacja - Top row, center-right */
     #menu section:nth-child(7) {
         order: 2;
