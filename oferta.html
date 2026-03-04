@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oferta - Abstrakcja</title>
+    <meta name="description" content="Oferta Abstrakcja – strzelanie, kręcenie, chlapanie i eventy specjalne. Sprawdź szczegóły i ofertę grupową.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&subset=latin,latin-ext&display=block" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&subset=latin,latin-ext&display=block"></noscript>
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <link rel="apple-touch-icon" href="assets/logo.png">
+    <link rel="stylesheet" href="oferta-style.css">
+</head>
+<body>
+    <header id="menu" role="navigation" aria-label="Główna nawigacja">
+        <section id="logo"><img src="assets/logo.png" alt="Logo" decoding="async"></section> 
+        <section><a href="index.html" class="link">Strona Główna</a></section> 
+        <section><a href="#strzelanie" class="link">Strzelanie</a></section> 
+        <section><a href="#krecenie" class="link">Kręcenie</a></section> 
+        <section><a href="#chlapanie" class="link">Chlapanie</a></section> 
+        <section><a href="#grupy" class="link">Eventy Specjalne</a></section> 
+        <section id="social-media">
+            <a href="https://www.facebook.com/p/Abstrakcja-61576512849752" class="social-link facebook" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+            </a>
+            <a href="https://www.instagram.com/abstrakcja.poznan" class="social-link instagram" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+            </a>
+            <a href="https://www.tiktok.com/@abstrakcja.poznan?lang=pl-PL" class="social-link tiktok" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M21 8.5c-2.7 0-5-2.2-5-5h-3.1v12.1c0 1.7-1.4 3.1-3.1 3.1S6.6 17.3 6.6 15.6s1.4-3.1 3.1-3.1c.3 0 .7.1 1 .2V9.5c-.3 0-.7-.1-1-.1-3.4 0-6.1 2.7-6.1 6.1s2.7 6.1 6.1 6.1 6.1-2.7 6.1-6.1V9.6c1.1 1 2.6 1.6 4.2 1.6V8.5z"/>
+                </svg>
+            </a>
+        </section>
+    </header>
+
+    <!-- Segment 1: Image Left, Text Right - Pink Background -->
+    <div class="container segment segment-1" id="strzelanie">
+        <div class="container-content segment-image">
+            <img src="assets/Strzelanie.webp" alt="Strzelanie - zdjęcie" width="1200" height="800" loading="lazy" decoding="async">
+            <a class="segment-btn" href="https://booksy.com/pl-pl/299316_abstrakcja_inni_1_polska#ba_s=seo">Rezerwuj termin</a>
+        </div>
+        <div class="container-content segment-text">
+            <h2>STRZELANIE – eksplozja koloru!</h2>
+            <p>Szukasz nietypowej atrakcji na randkę lub wspólny wypad? „Strzelanie” to zabawa, emocje i obraz, który zabierzesz ze sobą!</p>
+            <h3>Jak to działa?</h3>
+            <ul>
+                <li>Wybierz 5 kolorów farb (2 fluorescencyjne + 3 standardowe).</li>
+                <li>Załaduj broń CO₂ i strzelaj w balony nad płótnem – każdy wybuch to eksplozja koloru.</li>
+                <li>Na koniec umieść płótno na stole obrotowym i stwórz unikalne dzieło sztuki.</li>
+            </ul>
+            <h3>W cenie (129 PLN):</h3>
+            <ul>
+                <li>Płótno 40 × 50 cm + pudełko</li>
+                <li>Nielimitowane strzały (CO₂)</li>
+                <li>Ochrona: płaszcz, okulary, ochraniacze</li>
+                <li>Dostęp do strefy i kreatywnej przestrzeni (malowanie nawet po ścianach i suficie!)</li>
+                <li>Indywidualne stanowisko (max. 3 osoby)</li>
+                <li>Wsparcie obsługi</li>
+            </ul>
+            <h3>Dla ilu osób?</h3>
+            <ul>
+                <li>1 bilet = 1 osoba</li>
+                <li>Możliwość dokupienia wejścia (+20 zł / +40 zł)</li>
+                <li>Opcja dodatkowego płótna i farb</li>
+                <li>Pokój na wyłączność (max. 3 osoby)</li>
+            </ul>
+            <p>Czas trwania: 60 minut</p>
+            <p>Wiek: od 16 lat lub młodsze dzieci z dorosłym</p>
+            
+        </div>
+    </div>
+
+    <!-- Segment 2: Text Left, Image Right - Blue Background -->
+    <div class="container segment segment-2" id="krecenie">
+        <div class="container-content segment-text">
+            <h2>KRĘCENIE – sztuka w ruchu!</h2>
+            <p>Malowanie na kole to kreatywna zabawa bez zasad – chlapiąc, wylewając i rozbryzgując farby, wprawiasz płótno w ruch i tworzysz hipnotyzujący, abstrakcyjny obraz. Idealne na randkę, rodzinny wypad czy spotkanie ze znajomymi.</p>
+            <h3>Jak to działa?</h3>
+            <ul>
+                <li>Wybierz 5 farb (2 UV + 3 klasyczne).</li>
+                <li>Użyj stołu obrotowego i daj się ponieść wyobraźni.</li>
+                <li>Zakończ z jedynym w swoim rodzaju dziełem sztuki.</li>
+            </ul>
+            <h3>Cena: 109 PLN – w tym:</h3>
+            <ul>
+                <li>Płótno 40 × 50 cm + pudełko</li>
+                <li>Ochrona: płaszcz i ochraniacze</li>
+                <li>Elektryczny stół obrotowy</li>
+                <li>Nielimitowany dostęp do strefy i kreatywnej przestrzeni <br> (malowanie także po ścianach, podłodze, suficie!)</li>
+                <li>Prywatne stanowisko + wsparcie obsługi</li>
+            </ul>
+            <h3>Dla ilu osób?</h3>
+            <ul>
+                <li>1 bilet = 1 osoba</li>
+                <li>Druga osoba +20 zł (wspólne płótno i farby)</li>
+                <li>Możliwość dokupienia dodatkowego płótna i farb</li>
+                <li>Maks. 4 osoby (2 stoły → tworzenie w parach)</li>
+            </ul>
+                <p>Czas trwania: 60 minut</p>
+                <p>Wiek: od 5 lat</p>
+        </div>
+        <div class="container-content segment-image">
+            <img src="assets/Kręcenie.webp" alt="Kręcenie - zdjęcie" width="1200" height="800" loading="lazy" decoding="async">
+            <a class="segment-btn" href="https://booksy.com/pl-pl/299316_abstrakcja_inni_1_polska#ba_s=seo">Rezerwuj termin</a>
+        </div>
+    </div>
+
+    <!-- Segment 3: Image Left, Text Right - Yellow Background -->
+    <div class="container segment segment-3" id="chlapanie">
+        <div class="container-content segment-image">
+            <img src="assets/Chlapanie.webp" alt="Chlapanie - zdjęcie" width="1200" height="800" loading="lazy" decoding="async">
+            <a class="segment-btn" href="https://booksy.com/pl-pl/299316_abstrakcja_inni_1_polska#ba_s=seo">Rezerwuj termin</a>
+        </div>
+        <div class="container-content segment-text">
+            <h2>CHLAPANIE – totalna swoboda i farba wszędzie!</h2>
+            <p>Ekspresja bez zasad: chlap, rozlewaj i twórz dynamiczny obraz własnym stylem. Do dyspozycji masz nietypowe narzędzia – pistolety na farbę, taśmy, strzykawki, a nawet własne ręce. Idealne na randkę, wypad ze znajomymi czy po prostu oderwanie się od codzienności.</p>
+            <h3>Cena: 99 PLN – w tym:</h3>
+            <ul>
+                <li>5 farb (2 UV + 3 klasyczne)</li>
+                <li>Płótno 40 × 50 cm + pudełko</li>
+                <li>Ochrona (płaszcz + ochraniacze)</li>
+                <li>Dostęp do strefy i kreatywnej przestrzeni (malowanie też po ścianach, suficie, podłodze)</li>
+                <li>Stanowisko do tworzenia + wsparcie obsługi</li>
+            </ul>
+            <h3>Dla ilu osób?</h3>
+            <ul>
+                <li>1 bilet = 1 osoba</li>
+                <li>Druga osoba +20 zł (wspólne płótno i farby)</li>
+                <li>Możliwość dokupienia dodatkowych płócien i farb</li>
+                <li>Możliwość rezerwacji całego pokoju (max. 10 osób)</li>
+            </ul>
+            <p>Czas trwania: 60 minut</p>
+            <p>Wiek: od 3 lat</p>
+        </div>
+    </div>
+
+    <!-- Segment 4: Text Left, Image Right - Green Background -->
+    <div class="container segment segment-4" id="grupy">
+        <div class="container-content segment-text">
+            <h2>Oferta dla szkół i przedszkoli</h2>
+            <p>Zapraszamy na wyjątkową, kolorową zabawę, która pozwoli dzieciom i młodzieży odkrywać świat barw, kształtów i faktur. W naszej przestrzeni uczniowie mogą twórczo spędzić czas, rozwijając kreatywność i wyrażając emocje w niepowtarzalny sposób.</p>
+            <p>Metoda „Chlapanie” to swobodna forma artystycznej ekspresji – bez zasad i ograniczeń, pełna radości i energii!</p>
+            <h3>Ważne informacje:</h3>
+            <p>Zajęcia organizujemy w godzinach porannych od godz. 9:00, a harmonogram dopasowujemy do potrzeb klienta. Jednorazowo możemy przyjąć do 25 osób.</p>
+            
+            <h3>Pakiety do wyboru:</h3>
+            <ul>
+                <li><strong>60 zł / osoba</strong> – 1 godzina zabawy (malowanie, materiały, komplet ochronny, wsparcie obsługi)</li>
+                <li><strong>75 zł / osoba</strong> – 2 godziny zabawy (pakiet podstawowy + dodatkowe zabawy, konkursy oraz fluo dyskoteka)</li>
+            </ul>
+
+            <h3>Co zawiera pakiet dla każdego dziecka?</h3>
+            <ul>
+                <li>własne płótno malarskie</li>
+                <li>zestaw farb</li>
+                <li>płaszczyk ochronny</li>
+                <li>ochraniacze na buty</li>
+                <li>rękawiczki</li>
+                <li>niestandardowe przyrządy do malowania</li>
+                <li>karton do bezpiecznego zapakowania obrazu</li>
+            </ul>
+        </div>
+        <div class="container-content segment-image">
+            <img src="assets/IMG_8612.webp" alt="Eventy Specjalne - zdjęcie" width="1200" height="800" loading="lazy" decoding="async">
+            <a class="segment-btn" href="https://booksy.com/pl-pl/299316_abstrakcja_inni_1_polska#ba_s=seo">Rezerwuj termin</a>
+        </div>
+    </div>
+
+    <!-- Segment 5: Artystyczne Urodziny - Full Details Animated -->
+    <div class="container segment segment-5" id="urodziny">
+        <div class="birthday-card-container">
+            <div class="birthday-header">
+                <h2>Artystyczne Urodziny</h2>
+                <p>Zapraszamy na wyjątkowe, kreatywne urodziny pełne koloru, zabawy i artystycznych emocji! <br> Przez cały czas trwania imprezy dziećmi opiekuje się animator.</p>
+            </div>
+
+            <div class="birthday-grid">
+                <div class="birthday-section-box">
+                    <h3>Program (2 godziny)</h3>
+                    <ul>
+                        <li><strong>1 godzina:</strong> salka urodzinowa (zabawy, konkursy, fluo dyskoteka)</li>
+                        <li><strong>1 godzina:</strong> aktywność artystyczna (chlapanie farbami)</li>
+                        <li>Autorski obraz dla każdego uczestnika</li>
+                        <li>Opieka profesjonalnego animatora</li>
+                    </ul>
+                </div>
+
+                <div class="birthday-section-box">
+                    <h3>Co zawiera pakiet?</h3>
+                    <ul>
+                        <li>Własne płótno malarskie</li>
+                        <li>Zestaw farb i przyrządów</li>
+                        <li>Płaszczyk, ochraniacze i rękawiczki</li>
+                        <li>Karton do bezpiecznego transportu</li>
+                        <li><strong>Kawa i herbata dla rodziców w cenie</strong></li>
+                    </ul>
+                </div>
+
+                <div class="birthday-section-box">
+                    <h3>Salka Urodzinowa</h3>
+                    <ul>
+                        <li>Kolorowa zastawa stołowa i miseczki</li>
+                        <li>Szklane dzbanki na soki i lodówka na tort</li>
+                        <li>Osobny pokój dla rodziców (do 10 miejsc)</li>
+                        <li><strong>+100 zł</strong> w tygodniu / <strong>+200 zł</strong> w weekend</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="birthday-footer-info">
+                <div class="info-item">
+                    <h4>Koszt i uczestnicy</h4>
+                    <p><strong>100 zł / osoba</strong> (min. 5 os., max. 15 os.)</p>
+                    <p>Urodziny dla dzieci od 4. roku życia.</p>
+                </div>
+                <div class="info-item">
+                    <h4>Terminy</h4>
+                    <p><strong>W tygodniu:</strong> po 16:00</p>
+                    <p><strong>Weekendy:</strong> 11:30 oraz 15:30</p>
+                </div>
+                <div class="info-item">
+                    <h4>Ważne</h4>
+                    <p>Przekąski, tort i napoje we własnym zakresie.</p>
+                    <div style="margin-top: 15px;">
+                        <a class="segment-btn" href="https://booksy.com/pl-pl/299316_abstrakcja_inni_1_polska#ba_s=seo">Zarezerwuj teraz</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <footer class="footer">
+        <div class="footer-content">
+           <p>Abstrakcja to miejsce, gdzie kreatywność spotyka się z profesjonalizmem. Oferujemy wyjątkowe doświadczenia w zakresie strzelania, kręcenia, chlapania oraz eventów specjalnych. Nasz zespół doświadczonych instruktorów zapewni Ci bezpieczną i niezapomnianą przygodę.</p>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Abstrakcja. Wszystkie prawa zastrzeżone.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
