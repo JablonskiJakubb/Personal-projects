@@ -22,12 +22,16 @@ header {
     z-index: 1000;
 }
 
-header img {
+.image-placeholder {
     height: 8rem;
     width: 20rem;
     background-color: #EFF1F3;
     border-radius: 1rem;
-    object-fit: contain;
+    border: 2px solid #b07d8d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
 }
 
 header nav {
@@ -146,7 +150,7 @@ footer {
         height: auto;
     }
 
-    header img {
+    .image-placeholder {
         width: 15rem;
         height: 6rem;
     }

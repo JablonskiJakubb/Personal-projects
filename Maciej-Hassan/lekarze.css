@@ -34,15 +34,20 @@ main {
     padding-bottom: 2rem;
 }
 
-.carousel-item img {
-    max-height: 60vh;
+.carousel-placeholder {
+    height: 60vh;
     width: 100%;
-    object-fit: cover;
+    background-color: #EFF1F3;
+    border: 2px solid #b07d8d;
     border-bottom: 2px solid #fce4ec;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
     transition: transform 0.5s ease;
 }
 
-.carousel:hover .carousel-item img {
+.carousel:hover .carousel-placeholder {
     transform: scale(1.02);
 }
 
@@ -90,9 +95,9 @@ main {
         width: 90vw;
     }
 
-    .carousel-item img {
+    .carousel-placeholder {
         width: 90vw;
-        max-height: 50vh;
+        height: 50vh;
     }
 
     .btn {
